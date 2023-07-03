@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+p,
+a,
+a:hover {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*..................navbar..............*/
+#trangchu {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: rgba(61, 48, 63, 0.877);
+  opacity: 0.5;
+}
+#trangchu:hover {
+  opacity: 1;
+  transition: 1s;
+}
+header {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.navbar-brand {
+  display: block;
+}
+.navbar-brand img {
+  display: block;
+  width: 15%;
+  margin: 0px auto;
+}
+.navbar-nav .nav-item {
+  display: block;
+  padding: 20px 40px 0 30px;
+  font-size: 20px;
+}
+.gioithieu1 {
+  display: none;
+}
+.nav-item:hover .gioithieu1 {
+  display: block;
+  position: absolute;
+}
+.navbar-nav .nav-item:hover {
+  font-size: 22px;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0), 0 0 35px rgb(157, 32, 161),
+    0 0 10px rgb(86, 7, 117);
+  transition: all 0.5s;
+}
+.navbar-brand img:hover {
+  filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.575));
+  transition: all 0.5s ease;
+}
+
+header {
+  clear: both;
+  content: " ";
+  display: table;
+}
+/*...................section.......................*/
+section {
+  display: block;
+  position: relative;
+  background-color: rgba(17, 14, 17, 0.877);
+}
+#dobietdaylagi {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+#trangtri {
+  display: block;
+  width: 100%;
+  height: 450px;
+  background-image: url("../anhhangxe/anhnenhangxe4.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+}
+/*.................................*/
+#tenxe {
+  border-bottom: 4px double rgb(47, 22, 70);
+  padding: 40px 0px 10px 50px;
+}
+#tenxe .btn {
+  position: relative;
+  background: transparent;
+}
+#tenxe .btn:hover {
+  font-size: large;
+  transition: 1s;
+}
+#tenxe .btn::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: red;
+  z-index: 1;
+  transition: all 2s;
+}
+#tenxe .btn:hover::before {
+  width: 100%;
+  transition: 2s;
+}
+/*....................ảnh xe zin...............*/
+.col-xl-6 {
+  height: 45vw;
+}
+#anhxezin img {
+  display: block;
+  margin: 50px auto;
+  width: 90%;
+  height: 28vw;
+}
+.carousel-indicators li {
+  background-color: #666699;
+  width: 20%;
+  padding: 2px;
+}
+/*........................thông số xe.......*/
+.ttinxe {
+  margin-top: 20px;
+  padding: 0px 10px 0px 10px;
+  text-align: justify;
+}
+/*.hiệu ứng thông số*/
+.tsoxe {
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  grid-gap: 2rem;
+  margin: 20px 50px;
+}
+.tso {
+  width: 5rem;
+  height: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px;
+  transition: 1s;
+}
+.tso:hover ~ .tso {
+  transform: translateX(6rem);
+  transition: 1s;
+}
+.tso * {
+  display: inline-block;
+}
+.tso i {
+  font-size: larger;
+}
+.tso p {
+  opacity: 0;
+  position: absolute;
+  padding-left: 10px;
+}
+.tso:hover p {
+  opacity: 1;
+  transition: 3s;
+}
+#tso1:hover,
+#tso2:hover,
+#tso3:hover {
+  width: 9rem;
+  transition: 0.5s;
+  text-align: left;
+  cursor: default;
+}
+/*.......bảng..........*/
+.bang {
+  width: 60%;
+  margin: 0 auto;
+  display: none;
+}
+.bang th {
+  text-align: end;
+}
+.bang td {
+  opacity: 0.8;
+}
+/*............ảnh độ xe..........*/
+#phandoxe {
+  border-top: 3px double #666699;
+  border-radius: 30px;
+}
+#phandoxe h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 40px;
+  padding: 20px;
+}
+#phandoxe1 {
+  display: block;
+  height: 30vw;
+}
+.anhdoxe {
+  display: flex;
+  gap: 4px;
+}
+.anhdo {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  transition: 1s ease;
+}
+.anhdo img {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+.anhdo:hover {
+  flex: 4;
+  cursor: pointer;
+  transition: 1.5s ease;
+}
+.anhdo:hover img {
+  height: auto;
+}
+/*................card...............*/
+#mauxekhac {
+  height: 35vw;
+}
+#mauxekhac h2 {
+  padding: 30px;
+}
+.card {
+  background-color: rgba(44, 38, 66, 0.562);
+  border-radius: 10px;
+}
+.card:hover:not(.card-img-top) {
+  background-color: rgba(25, 22, 37, 0.945);
+  transition: 1s ease;
+}
+.card:hover .card-img-top {
+  opacity: 1;
+  width: 110%;
+  margin: 0 auto;
+  transition: 1s ease;
+}
+.card-img-top {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+}
+.card-title {
+  display: block;
+  overflow: auto;
+  height: 20px;
+  font-size: large;
+  font-weight: bold;
+}
+.card-link {
+  display: inline-block;
+  position: relative;
+  padding: 2px 10px;
+  background: #666699;
+  border-radius: 30px;
+  opacity: 0.5;
+}
+.card-link:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+/*.....................ket................*/
+body {
+  background-color: rgb(14, 9, 9);
+}
+#foot {
+  margin-left: 15vw;
+}
+.ket img {
+  display: block;
+  width: 20%;
+  margin: 10px;
+}
+.ket {
+  display: block;
+  width: 30%;
+  float: left;
+  text-align: left;
+  font-size: small;
+  padding-top: 20px;
+}
+.ket i {
+  font-size: 30px;
+  margin: 5px;
+}
+.ket i:hover {
+  position: relative;
+  font-size: 34px;
+  transition: 0.5s;
+}
+/*..................................*/
+@media only screen and(max-width:1000px) {
+  #trangchu .nav-item {
+    display: inline-block;
+    font-size: 10px;
+  }
+  /*...................*/
+  .col-xl-6 {
+    height: 100vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #trangchu *:not(.gioithieu1) {
+    display: block;
+    float: left;
+  }
+  .navbar-brand {
+    width: 20%;
+    height: 50px;
+  }
+  .navbar-brand img {
+    width: 60%;
+  }
+  #trangchu .nav-item {
+    font-size: 10px;
+    padding: 20px 15px 0px 15px;
+  }
+  #trangchu:hover .gioithieu1 {
+    display: none;
+  }
+  /*.................*/
+  #anhxezin img {
+    height: 40vw;
+  }
+  .carousel-indicators li {
+    width: 10%;
+  }
+  /*...................*/
+  .col-xl-6 {
+    height: auto;
+  }
+  /*.................*/
+
+  #phandoxe1 {
+    height: auto;
+  }
+  .anhdo img {
+    width: 100%;
+    height: 10vw;
+  }
+  /*.................*/
+  #mauxekhac {
+    height: auto;
+  }
+  .card-deck {
+    display: block;
+    overflow: hidden;
+  }
+  .card {
+    display: block;
+    width: 40%;
+    float: left;
+    height: 50vw;
+    margin: 20px 20px;
+  }
+  .card-title {
+    font-size: 15px;
+    height: 50px;
+  }
+  /*.....................*/
+  #foot {
+    margin-left: 30px;
+  }
+  #foot .ket {
+    display: block;
+    line-height: 5px;
+    width: 33.3%;
+  }
+  .ket p {
+    font-size: 10px;
+  }
+  .ket i {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #trangchu .nav-item {
+    font-size: 8px;
+    padding: 10px 0;
+  }
+  #trangchu .nav-item:not(.nav-item:nth-child(1)) {
+    margin-left: 20px;
+  }
+  #tenxe .btn {
+    font-size: smaller;
+  }
+  div h1 {
+    font-size: 25px;
+  }
+  /*.................*/
+  .card {
+    display: block;
+    width: 30%;
+    float: left;
+    height: 50vw;
+    margin: 0 5px;
+  }
+
+  .card-title {
+    font-size: 12px;
+  }
+  .card-link {
+    font-size: 8px;
+    padding: 5px;
+  }
+  /*......*/
+  .ket:nth-child(2) {
+    display: none;
+  }
+}

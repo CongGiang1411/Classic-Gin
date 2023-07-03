@@ -1,0 +1,447 @@
+* {
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  color: white;
+  z-index: 0;
+}
+p,
+a,
+a:hover {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*..............navbar.............*/
+#trangchu {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: rgb(37, 30, 30);
+  background-repeat: repeat;
+}
+.navbar-brand {
+  width: 40%;
+}
+.navbar-brand img {
+  display: block;
+  width: 15%;
+  margin: 0px auto;
+}
+.navbar-nav .nav-item {
+  display: inline-block;
+  padding: 20px 40px 0px 30px;
+  margin-top: 10px;
+  font-size: larger;
+}
+.navbar-nav .nav-item:hover {
+  font-size: 22px;
+  text-shadow: 1px 1px 2px wheat, 0 0 25px red, 0 0 5px rgb(39, 1, 1);
+  transition: all 0.5s;
+}
+#trangchu * {
+  background-color: rgb(37, 30, 30);
+}
+.gioithieu1 {
+  display: none;
+  position: absolute;
+  border-radius: 20px;
+}
+
+#gioithieu:hover .gioithieu1 {
+  display: block;
+  width: 10%;
+}
+#hangxe:hover .gioithieu1 {
+  display: block;
+  width: 10%;
+}
+/*................................*/
+#dau {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+#chuyenanh li {
+  width: 15%;
+  background-color: rgb(176, 116, 116);
+}
+.carousel-inner img {
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+  height: 580px;
+}
+.carousel-caption * {
+  width: 23%;
+  background-color: transparent;
+  color: rgb(5, 5, 5);
+  text-align: left;
+}
+/*............................*/
+
+#ndchinh {
+  float: left;
+  width: 50%;
+  margin: 30px 30px 30px 150px;
+  text-align: justify;
+  font-size: large;
+}
+.ndchinhchuan *,
+.ndchinhchuan {
+  background-color: #161515;
+}
+.ndchinhchuan p {
+  padding: 10px 30px;
+}
+.ndchinhchuan {
+  border: 5px double #272323a8;
+}
+.btn-group-lg img {
+  display: inline-block;
+  width: 100%;
+}
+.btn-group-lg .btn {
+  padding: 0px;
+  margin: 5px 30px;
+}
+.btn-group-lg .btn:hover:not(#nut) {
+  background-color: rgb(138, 37, 37);
+  border-radius: 10px;
+  transition: 0.5s ease-in;
+}
+.btn .anh,
+.anh1,
+.anh2 {
+  border: 2px double black;
+  border-radius: 10px;
+}
+#ndphu * {
+  background-color: rgb(30, 20, 20);
+}
+
+#ndphu {
+  position: absolute;
+  right: 0%;
+  width: 20%;
+  height: 1000px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+}
+#ndphu1 {
+  position: sticky;
+  top: 40px;
+  width: 100%;
+  opacity: 0.1;
+  border: 5px inset rgb(46, 32, 28);
+  background-color: rgb(30, 20, 20);
+  transition: all 2s;
+}
+#ndphu1:hover {
+  opacity: 0.7;
+}
+#ndphu1 a {
+  display: block;
+  margin-top: 20px;
+  font-size: small;
+}
+#ndphu1 img {
+  display: block;
+  width: 20%;
+}
+
+#ndphu1 .media:hover img {
+  width: 25%;
+  transition: 0.5s;
+}
+/*.....................................*/
+
+.media p {
+  padding-left: 10px;
+}
+section::after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+.dropdown-toggle {
+  display: block;
+  width: 20%;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.444);
+  border-radius: 20px;
+}
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.444);
+  border-radius: 20px;
+}
+.dropdown-menu .dropdown-item {
+  color: white;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.521);
+  border-radius: 20px;
+  font-size: large;
+}
+#anhnenan {
+  display: block;
+  position: absolute;
+  width: 20%;
+  margin-left: 81%;
+  margin-top: 40vw;
+  opacity: 0;
+  animation: daulau 4s linear 3s 3 forwards;
+}
+@keyframes daulau {
+  form {
+    margin-left: 100%;
+  }
+  to {
+    opacity: 0.5;
+    margin-left: 65%;
+  }
+}
+#anhnenan1 {
+  display: block;
+  position: absolute;
+  width: 10%;
+  margin-top: 20%;
+  margin-left: -10%;
+  z-index: 0;
+  opacity: 0.8;
+  animation: daulau2 4s linear 3s forwards;
+}
+@keyframes daulau2 {
+  from {
+    margin-left: -10%;
+  }
+  to {
+    margin-left: -2%;
+    width: 12%;
+  }
+}
+/*.........................................*/
+#video1 * {
+  padding: 12px 0px;
+  background-color: rgb(19, 19, 19);
+}
+#cmtvideo p {
+  display: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#cmtvideo:hover p {
+  position: relative;
+  display: inline-block;
+}
+#XE {
+  background-color: rgb(16, 16, 16);
+}
+#XE *:not(a) {
+  background-color: rgb(16, 16, 16);
+}
+/*.....................................................*/
+.card {
+  display: block;
+  position: relative;
+  margin: 30px 20px;
+  border: none;
+}
+.card img {
+  display: block;
+  width: 80%;
+  height: 14vw;
+  margin: 10px auto;
+}
+.card .card-title {
+  text-align: center;
+}
+.card .card-link {
+  display: block;
+  margin: 0px 7vw;
+  padding: 1px;
+  background-color: rgba(0, 0, 0, 0.493);
+  border-radius: 10px;
+}
+.card img:hover:not(#xeadmin2) {
+  position: absolute;
+  width: 81%;
+  margin: 0 auto;
+}
+.card .card-link:hover {
+  border: 2px outset rgb(83, 22, 22);
+  transition: 0.5s;
+}
+.card .card-text {
+  margin-top: 18vw;
+}
+/*.......................................................*/
+body {
+  background-color: rgb(14, 9, 9);
+}
+#foot {
+  margin-left: 15vw;
+}
+.ket img {
+  display: block;
+  width: 20%;
+  margin: 10px;
+}
+.ket {
+  display: block;
+  width: 30%;
+  float: left;
+  text-align: left;
+  font-size: small;
+  padding-top: 20px;
+}
+.ket i {
+  font-size: 30px;
+  margin: 5px;
+}
+.ket i:hover {
+  position: relative;
+  font-size: 34px;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 1000px) {
+  #dau {
+    height: 10px;
+  }
+  #ndphu {
+    display: none;
+  }
+  #ndchinh {
+    width: 100%;
+    margin: 10px;
+  }
+  #ndchinh p {
+    margin: 0px 10px;
+  }
+  .col-lg-5 {
+    margin: 0px;
+    padding: auto;
+  }
+  a {
+    display: inline-block;
+    background-attachment: fixed;
+  }
+  #anhnenan,
+  #anhnenan1 {
+    display: none;
+  }
+  #dropdown {
+    display: none;
+  }
+  .col-lg-5 video {
+    width: 400px;
+    margin-left: -20%;
+  }
+  /*.......*/
+  .navbar-brand {
+    width: 20%;
+  }
+  .navbar-brand img {
+    width: 50%;
+  }
+  #trangchu .nav-item {
+    font-size: small;
+    padding: 30px;
+  }
+  /*.......*/
+  .card-link {
+    font-size: smaller;
+    width: 80%;
+  }
+  /*.......*/
+  #foot {
+    margin-left: 30px;
+  }
+  #foot .ket {
+    line-height: 5px;
+    width: 33.3%;
+  }
+  .ket p {
+    font-size: 10px;
+  }
+  .ket i {
+    font-size: small;
+  }
+  .ket i:hover {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  #trangchu {
+    position: relative;
+  }
+  #trangchu *:not(.gioithieu1) {
+    display: block;
+    float: left;
+  }
+  #trangchu .nav-item {
+    display: block;
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+  #trangchu:hover .gioithieu1 {
+    display: none;
+  }
+  .carousel-inner img {
+    height: 400px;
+  }
+  /*.......................*/
+  .card {
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card:nth-child(1) {
+    margin-top: 30%;
+  }
+  .card img {
+    height: auto;
+  }
+  .card img:hover:not(#xeadmin2) {
+    position: relative;
+  }
+  section p {
+    font-size: small;
+  }
+  /*....................*/
+  .card {
+    width: 70%;
+  }
+  .card .card-title {
+    font-size: large;
+  }
+  .card img:hover:not(#xeadmin2) {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #trangchu .nav-item {
+    display: inline-block;
+    font-size: 8px;
+    padding: 0;
+    margin-left: 10px;
+  }
+  .carousel-inner img {
+    height: 200px;
+  }
+  .carousel-caption * {
+    font-size: 10px;
+  }
+  .col-lg-5 video {
+    width: 300px;
+    margin-left: -110px;
+  }
+  .ket:nth-child(2) {
+    display: none;
+  }
+}

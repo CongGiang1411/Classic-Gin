@@ -1,0 +1,70 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  grid-gap: 30px;
+}
+.item {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid blueviolet;
+  transition: all 3s;
+  text-align: center;
+}
+.item:hover ~ .item {
+  transform: translateX(10rem);
+  transition: transform 1s;
+}
+.item * {
+  padding-top: 20px;
+}
+.item span {
+  opacity: 0;
+}
+#a:hover,
+#b:hover,
+#c:hover {
+  width: 13rem;
+  transition: all 1s;
+  text-align: left;
+  padding-left: 10px;
+}
+.item:hover span {
+  display: inline;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 3s;
+}
+/*.......................*/
+.gall {
+  display: flex;
+  width: 40%;
+  gap: 4px;
+}
+.card {
+  position: relative;
+  left: 10px;
+  width: 10%;
+  height: 160px;
+  transition: 0.5s ease;
+  flex: 1;
+}
+.card:nth-child(1) {
+  background-color: rgb(29, 119, 199);
+}
+.card:nth-child(3) {
+  background-color: rgb(29, 119, 199);
+}
+.card:nth-child(5) {
+  background-color: rgb(29, 119, 199);
+}
+.card:nth-child(2) {
+  background-color: rgb(199, 125, 29);
+}
+.card:nth-child(4) {
+  background-color: rgb(199, 168, 29);
+}
+.card:hover {
+  flex: 4;
+  font-weight: bold;
+  cursor: pointer;
+}

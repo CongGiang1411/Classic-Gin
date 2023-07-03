@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="icon" href="../anh_index/favicon (1).ico" />
+    <script
+      src="https://kit.fontawesome.com/98d78f090f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../css/index.css" />
+    <script language="javascript" src="../js/index.js"></script>
+
+    <title>Classic Gin - Trang chủ</title>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <header class="container-fluid" id="trangchu">
+      <div class="navbar navbar-expand-sm">
+        <a href="../html/index.html" class="navbar-brand">
+          <img src="../anh_index/icon2-removebg-preview.png" alt="" />
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <p><a href="../html/index.html">TRANG CHỦ</a></p>
+          </li>
+          <li class="nav-item" id="gioithieu">
+            <p><a href="../html/lichsu.html">GIỚI THiỆU</a></p>
+            <div class="gioithieu1" style="opacity: 0.5">
+              <p><a href="../html/lichsu.html" onclick="C()">LỊCH SỬ</a></p>
+              <p><a href="../html/lichsu.html#ndchinh">KIỂU DÁNG</a></p>
+            </div>
+          </li>
+          <li class="nav-item" id="hangxe">
+            <p><a href="../html/hangxe.html">HÃNG XE</a></p>
+            <div class="gioithieu1" style="opacity: 0.5">
+              <p><a href="#nhakawasaki">Kawasaki</a></p>
+              <p><a href="#nhayamaha">Yamaha</a></p>
+              <p><a href="#nhagpx">Gpx</a></p>
+              <p><a href="#nhasym">Sym</a></p>
+            </div>
+          </li>
+          <li class="nav-item">
+            <p><a href="../html/lienhe.html">LIÊN HỆ</a></p>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <div class="container-fluid disabled" id="dau"></div>
+      <div
+        class="carousel slide"
+        data-ride="carousel"
+        id="demo"
+        style="z-index: 1"
+      >
+        <ul class="carousel-indicators bg-transparent" id="chuyenanh">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../anh_index/anhnen1.jpg" alt="a" />
+            <div class="carousel-caption bg-transparent">
+              <h1
+                style="
+                  background-color: rgba(255, 235, 205, 0.61);
+                  opacity: 0.7;
+                "
+              >
+                Xe Cổ Điển
+              </h1>
+              <p>Bước đệm để giao lưu học hỏi</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../anh_index/anhnen2 (1).jpg" alt="b" />
+          </div>
+          <div class="carousel-item">
+            <img src="../anh_index/anhnen2 (2).jpg" alt="c" />
+          </div>
+          <div class="carousel-item">
+            <img src="../anh_index/anhnen2-1.jpg" alt="d" />
+          </div>
+        </div>
+        <a href="#demo" class="carousel-control-prev" data-slide="prev">
+          <span class="carousel-control-prev-icon" style="color: brown"> </span>
+        </a>
+        <a href="#demo" class="carousel-control-next" data-slide="next">
+          <span class="carousel-control-next-icon"> </span>
+        </a>
+      </div>
+      <div></div>
+      <div class="container-sm" id="ndchinh" style="z-index: 1">
+        <div class="ndchinhchuan">
+          <h1 style="padding: 20px">
+            CLASSIC BIKE <i class="material-icons">favorite</i>
+          </h1>
+          <p>
+            Classic không phải là tên gọi của một hãng sản xuất xe nào đó, mà
+            đây chỉ là cái tên mà giới chơi xe dành cho những mẫu xe cũ được ra
+            đời từ nhiều thập niên trước hoặc là những mẫu xe mới có thiết kế và
+            kiểu dáng tương tự như vậy.
+          </p>
+          <p>
+            Thường thì những dòng xe Classic mang xu hướng rất đơn giản với kiểu
+            dáng dễ dàng nhận diện như thiết kế hai bánh, đèn tròn, bình xăng
+            gọn gàng phía trước, yên đơn trải dài từ trước ra sau, hai ốp nhỏ
+            gọn bên hông và bên dưới là khối động cơ của xe. Chính từ sự đơn
+            giản và hoài cổ đó đã đem đến nhiều cảm xúc cho những anh em yêu
+            thích dòng xe này và có thể nói sự khác biệt lớn nhất trong thế giới
+            xe 2 bánh ngày nay chỉ có thể đến từ những chiếc xe với tên gọi
+            chung là Classic.
+          </p>
+          <p>
+            Tuy nhiên cũng chính từ sự đơn giản trong thiết kế mà những dòng xe
+            Classic lại có nhiều biến thể về ngoại hình và mang nhiều tên gọi
+            khác nhau như Cafe Racer, Scrambler, Bobber hay Tracker…
+          </p>
+          <div class="btn-group-lg">
+            <button class="btn">
+              <input type="button" class="anh" value="cafe racer" />
+            </button>
+            <button class="btn">
+              <input type="button" class="anh1" value="bobber" />
+            </button>
+            <button class="btn">
+              <input type="button" class="anh2" value="tracker" />
+            </button>
+            <button class="btn disabled" id="nut" style="font-size: smaller">
+              <p>&lt-ấn dô</p>
+            </button>
+
+            <img
+              src="../anh_index/cf-1.jpg"
+              alt=""
+              class="anhh"
+              style="display: none"
+            />
+            <img
+              src="../anh_index/bobber-1.jpg"
+              alt=""
+              class="anhh1"
+              style="display: none"
+            />
+            <img
+              src="../anh_index/tracker-1.jpg"
+              alt=""
+              class="anhh2"
+              style="display: none"
+            />
+            <script>
+              $(".anh").click(function () {
+                $(".anhh").toggle(4000);
+                $(".anhh1").hide();
+                $(".anhh2").hide();
+              });
+              $(".anh1").click(function () {
+                $(".anhh1").toggle(4000);
+                $(".anhh").hide();
+                $(".anhh2").hide();
+              });
+              $(".anh2").click(function () {
+                $(".anhh2").toggle(4000);
+                $(".anhh1").hide();
+                $(".anhh").hide();
+              });
+            </script>
+          </div>
+          <br />
+          <p>
+            <a href="../html/hangxe.html" style="font-size: large"
+              ><i
+                ><b
+                  ><u>
+                    tìm hiểu thêm về các kiểu dáng độ mang tính cá nhân hóa!</u
+                  ></b
+                ></i
+              ></a
+            >
+          </p>
+          <p>
+            Tuy có thiết kế đơn giản nhưng việc cá nhân hóa những mẫu xe Classic
+            thì lại vô cùng đa dạng và đôi khi cũng khá phức tạp để có thể định
+            hình một phong cách cho bản thân người chơi.Những dòng xe cổ điển
+            hay nói đúng hơn anh em yêu thích dòng xe không tuổi này.
+          </p>
+        </div>
+      </div>
+      <aside class="container" id="ndphu" style="z-index: 1">
+        <div id="ndphu1">
+          <div
+            style="border-bottom: 2px solid rgb(43, 37, 37); padding-top: 5px"
+          >
+            <h5>Nội dung hot hòn họt</h5>
+          </div>
+          <a href="../html/lichsu.html">
+            <div class="media">
+              <img src="../anh_gioithieu_ls/icon-removebg-preview.png" alt="" />
+              <div class="media-body">
+                <p>Lịch sử ra đời của dòng xe cổ điển</p>
+              </div>
+            </div></a
+          >
+          <a href="../html_xe/legend_150.html">
+            <div class="media">
+              <img src="../anh_index/gpx-legend-150-1.jpg" alt="" />
+              <div class="media-body">
+                <p>
+                  <i> gpx-legend-150</i> Chiếc xe phân khúc giá rẻ đầy những hay
+                  ho
+                </p>
+              </div>
+            </div></a
+          >
+          <a href="../html_xe/W800.html">
+            <div class="media">
+              <img
+                src="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/news/th_black_river_mark.jpg"
+                alt=""
+                style="height: 70px"
+              />
+              <div class="media-body">
+                <p>
+                  <i> Kawasaki</i> thương hiệu đến từ Nhật Bản ra mắt chiếc xe
+                  phong cách cổ điển
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href="../html_xe/wolf125.html">
+            <div class="media">
+              <img src="../anh_index/anhcanhan.JPEG" alt="" />
+              <p>Xe của admin... con báo dưới hình hài con sói</p>
+            </div>
+          </a>
+        </div>
+      </aside>
+      <img
+        class="disabled"
+        id="anhnenan"
+        src="../anh_gioithieu_ls/icon3-removebg-preview.png"
+        alt=""
+      />
+      <img
+        id="anhnenan1"
+        src="../anh_gioithieu_ls/icon-removebg-preview.png"
+        alt=""
+      />
+    </section>
+    <div class="dropdown dropright" style="height: 13vw" id="dropdown">
+      <div class="dropdown-toggle" data-toggle="dropdown">
+        XEM TOÀN BỘ KIỂU DÁNG ĐỘ
+      </div>
+      <div class="dropdown-menu">
+        <a href="../html/lichsu.html#cafe" class="dropdown-item">Cafe racer</a>
+        <a href="../html/lichsu.html#tracker" class="dropdown-item">Tracker</a>
+        <a href="../html/lichsu.html#chopper" class="dropdown-item">Chopper</a>
+        <a href="../html/lichsu.html#bobber" class="dropdown-item">Bobber</a>
+        <a href="../html/lichsu.html#ndchinh" class="dropdown-item">...</a>
+      </div>
+    </div>
+    <div
+      class="container-fluid"
+      id="video1"
+      style="
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      "
+    >
+      <div class="row">
+        <h2 class="container-fluid" style="padding: 10px 0px 0px 20px">
+          Cafe racer Mexico
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-5" style="display: block; margin-left: 130px">
+          <video
+            width="600"
+            height="300"
+            controls
+            autoplay
+            src="../anh_index/Teaser - Lost Boys Cafe Racer Crew México 2.1.mp4"
+          ></video>
+        </div>
+        <div class="col-lg-5" style="display: block; padding: 30px 50px">
+          <div id="cmtvideo" style="display: block">
+            Văn hóa trên yên xe không chỉ có mỗi xe cộ và những chuyến đi...
+            <p>
+              Để thực sự hòa làm một với chiếc xe mà bạn yêu thích và trở thành
+              một bản thể thống nhất, thì từ lâu phong cách thời trang dành cho
+              những kẻ yêu xe, yêu những chuyến đi vẫn luôn được chú trọng. Thời
+              trang của những anh em yêu thích dòng xe cổ điển nó cũng đa dạng
+              như việc tùy chỉnh lại chiếc xe, với nhiều phong cách từ cá tính,
+              bụi bặm với chiếc áo phông cotton và quần jeans hay những quý ông
+              yêu thích sự lịch lãm với những trang phục đậm chất Gentlemen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="XE">
+      <h2
+        style="border-bottom: 3px double darkred; padding-top: 15px"
+        id="nhagpx"
+      >
+        <b> Nhà gpx</b>
+      </h2>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/gpx-legend-150-removebg-preview.png"
+              class="card-img-top"
+              alt="ảnh gpx-legend-150"
+            />
+            <h3 class="card-title">gpx-legend-150</h3>
+            <a class="card-link" href="../html_xe/legend_150.html"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/GPX-Legend-Gentleman-200-removebg-preview.png"
+              class="card-img-top"
+              alt="ảnh gpx-gentleman-200"
+            />
+            <h3 class="card-title">gpx-gentleman-200</h3>
+            <a class="card-link" href="../html_xe/gentleman_200.html"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/gpx-legend-twin-250-removebg-preview.png"
+              class="card-img-top"
+              alt="ảnh gpx-legend-twin-250w"
+            />
+            <h3 class="card-title">gpx-twin-250</h3>
+            <a class="card-link" href="../html_xe/twin_250.html"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/Legend-200-removebg-preview.png"
+              class="card-img-top"
+              alt="ảnh gpx-legend-200"
+            />
+            <h3 class="card-title">gpx-legend-200</h3>
+            <a class="card-link" href="../html_xe/legend_200.html"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">cập nhật sau...</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body"></div>
+        </div>
+      </div>
+      <h2
+        style="border-bottom: 3px double rgba(6, 225, 83, 0.746)"
+        id="nhakawasaki"
+      >
+        <b>Nhà Kawasaki</b>
+      </h2>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <img src="../anh_xe/W175.png" alt="ảnh w175" class="card-img-top" />
+            <h3 class="card-title">kawasaki-w175</h3>
+            <a href="../html_xe/W175.html" class="card-link"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <img src="../anh_xe/W800.png" alt="ảnh w800" class="card-img-top" />
+            <h2 class="card-title">kawasaki-w800</h2>
+            <a href="../html_xe/W800.html" class="card-link"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">cập nhật sau...</p>
+          </div>
+        </div>
+      </div>
+      <h2
+        style="border-bottom: 2px double rgba(245, 245, 245, 0.396)"
+        id="nhayamaha"
+      >
+        Nhà Yamaha
+      </h2>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/xsr-155.png"
+              alt="ảnh xsr155"
+              class="card-img-top"
+            />
+            <h3 class="card-title">yamaha-xsr155</h3>
+            <a href="../html_xe/Xsr-155.html" class="card-link"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/yb-125.png"
+              alt="ảnh yb125"
+              class="card-img-top"
+            />
+            <h3 class="card-title">yamaha-yb125</h3>
+            <a href="../html_xe/Yb-125.html" class="card-link"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">cập nhật sau</p>
+          </div>
+        </div>
+      </div>
+      <h2 style="border-bottom: 2px double black" id="nhasym">Nhà Sym</h2>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/husky-150.png"
+              alt="ảnh husky-150"
+              class="card-img-top"
+            />
+            <h3 class="card-title">sym-husky150</h3>
+            <a href="../html_xe/husky_150.html" class="card-link"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="../anh_xe/sym-husky-125.png"
+              alt="ảnh husky125"
+              class="card-img-top"
+            />
+            <h3 class="card-title">sym-husky125</h3>
+            <a href="../html_xe/husky_125.html" class="card-link"
+              >Tìm hiểu thêm...</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" onmouseover="A()" onmouseleave="B()">
+            <img
+              src="../anh_xe/wolf 125.png"
+              id="xeadmin1"
+              class="card-imh-top"
+              alt="ảnh wolf125"
+            />
+            <img
+              src="../anh_xe/IMG_6121.png"
+              id="xeadmin2"
+              style="display: none; z-index: -1; position: relative"
+              class="card-img-top"
+              alt=""
+            />
+            <h3 class="card-title">
+              sym-wolf125
+              <span style="font-size: 10px; opacity: 0.7">xe của admin đó</span>
+            </h3>
+            <a href="../html_xe/wolf125.html" class="card-link"
+              >Ấn vô! Phải ấn vô</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container" id="foot">
+        <div class="ket">
+          <img
+            class="logo"
+            src="../anh_index/icon2-removebg-preview.png"
+            alt="logo"
+          />
+          <p><b>Classic Gin</b></p>
+        </div>
+        <div class="ket">
+          <p>Trang web lập ra</p>
+          <p>Với mục đích duy nhẩt</p>
+          <p>Cùng mọi người ngắm xe!</p>
+        </div>
+        <div class="ket">
+          <p>Liên hệ với tôi</p>
+          <a href="https://www.facebook.com/gin.max.39/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" id="ins"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" id="git"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <script>
+        $("#ins,#git").click(function () {
+          alert("Đừng tò mò lung tung hãy ngắm xe đi nhé ! mãi iu");
+        });
+      </script>
+    </footer>
+  </body>
+</html>

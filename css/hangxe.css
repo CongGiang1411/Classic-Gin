@@ -1,0 +1,392 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+p,
+a,
+a:hover {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+#trangchu {
+  display: block;
+  position: fixed;
+  width: 100%;
+  background-color: #302125;
+  z-index: 2;
+}
+header {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vw;
+  top: 0;
+}
+.navbar-brand {
+  width: 40%;
+}
+.navbar-brand img {
+  display: block;
+  width: 15%;
+  margin: 0px auto;
+}
+.navbar-nav .nav-item {
+  display: block;
+  padding: 20px 40px 0 30px;
+  font-size: larger;
+}
+.navbar-nav .nav-item:hover {
+  font-size: 22px;
+  text-shadow: 3px 3px 3px rgba(247, 0, 255, 0.63), 0 0 35px rgb(47, 12, 48),
+    0 0 10px rgb(86, 7, 117);
+  transition: all 0.5s;
+}
+.nav-item .gioithieu1 {
+  display: none;
+}
+.nav-item:hover .gioithieu1 {
+  display: block;
+  width: 10%;
+  position: absolute;
+}
+.navbar-brand img:hover {
+  filter: drop-shadow(2px 2px 2px rgba(234, 0, 255, 0.575));
+  transition: all 0.5s ease;
+}
+header {
+  clear: both;
+  content: " ";
+  display: table;
+}
+/*......................................*/
+article {
+  display: block;
+  margin-top: 100px;
+}
+.modau {
+  display: block;
+  position: relative;
+  height: 400px;
+  background-image: url("../anhhangxe/anhnenhangxe2.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+#modau11 {
+  display: block;
+  background: transparent;
+  width: 30%;
+  position: relative;
+  left: 18%;
+  top: 35%;
+  animation: modau11 3s ease 3s forwards;
+}
+#modau11 p,
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+}
+@keyframes modau11 {
+  0% {
+    top: 80%;
+  }
+  100% {
+    top: 35%;
+  }
+}
+#modau2 {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 100px;
+  background-image: url("../anhhangxe/anhnenhangxe3.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  animation: modau2 3s ease 3s 1 forwards;
+}
+@keyframes modau2 {
+  0% {
+    height: 400px;
+  }
+  100% {
+    height: 0px;
+    width: 100%;
+  }
+}
+#modau2 h2 {
+  display: block;
+  position: relative;
+  top: 20%;
+  left: 30%;
+  color: black;
+  transition: all 1s;
+  animation: modau22 3s ease 3s forwards;
+}
+@keyframes modau22 {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(148, 57, 136);
+  }
+  100% {
+    color: transparent;
+  }
+}
+/*.................................................*/
+#batdaund {
+  margin-top: 30px;
+  padding: 20px;
+  font-size: large;
+}
+/*..................................................*/
+#ndphu div {
+  width: 70%;
+  margin: 50px;
+  background-color: transparent;
+  border: 3px double #121235;
+  position: sticky;
+  top: 20%;
+}
+.btn-group-vertical * {
+  opacity: 0.7;
+}
+.btn {
+  background-color: #423437;
+  border: none;
+}
+.btn:hover:not(#hang),
+.btn:hover a {
+  font-size: large;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: 1s;
+  opacity: 1;
+}
+
+.btn:not(#hang)::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+}
+.btn:hover:not(#hang)::before {
+  height: 100%;
+  background-image: linear-gradient(to top, #382e31, rgb(99, 59, 69));
+  transition: 1s;
+}
+/*..........................................*/
+#ndchinh h4 {
+  font-size: 30px;
+  padding-top: 20px;
+  padding-left: 30px;
+  border-bottom: 4px double rgb(90, 9, 54);
+}
+#ndchinh .card {
+  background: transparent;
+  border: none;
+}
+#ndchinh img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  transition: 2s;
+}
+#ndchinh img:hover {
+  position: relative;
+  width: 90%;
+  height: 180px;
+  transition: 3s ease;
+  cursor: pointer;
+}
+#ndchinh .card-title {
+  padding: 10px;
+  display: block;
+}
+#ndchinh .card-link {
+  display: block;
+  width: 50%;
+  background-color: #69435a;
+  padding: 10px;
+  border-radius: 30px;
+  opacity: 0.3;
+}
+#ndchinh .card-link:hover {
+  width: 80%;
+  opacity: 1;
+  transition: 1s ease;
+}
+section::after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+/*.............................................*/
+body {
+  background-color: #1a171a;
+}
+#foot {
+  margin-left: 15vw;
+}
+.ket img {
+  display: block;
+  width: 20%;
+  margin: 10px;
+}
+.ket {
+  display: block;
+  width: 30%;
+  float: left;
+  text-align: left;
+  font-size: small;
+  padding-top: 20px;
+}
+.ket i {
+  font-size: 30px;
+  margin: 5px;
+}
+.ket i:hover {
+  position: relative;
+  font-size: 34px;
+  transition: 0.5s;
+}
+/*..................................*/
+@media only screen and (max-width: 1000px) {
+  #trangchu {
+    position: relative;
+  }
+  .navbar-brand {
+    width: 20%;
+  }
+  .navbar-brand img {
+    width: 50%;
+  }
+  #trangchu .nav-item {
+    display: inline-block;
+    font-size: small;
+    padding: 30px;
+  }
+  /*...........................*/
+  #hang h4 {
+    font-size: 15px;
+  }
+  .card {
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+  }
+  #ndchinh img {
+    display: block;
+    height: auto;
+  }
+  #ndchinh .card-link {
+    display: block;
+    font-size: small;
+    width: 100%;
+  }
+
+  #modau2 h2 {
+    font-size: medium;
+  }
+  /*.............................*/
+  #foot {
+    margin-left: 30px;
+  }
+  #foot .ket {
+    line-height: 5px;
+    width: 33.3%;
+  }
+  .ket p {
+    font-size: 10px;
+  }
+  .ket i {
+    font-size: small;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #trangchu *:not(.gioithieu1) {
+    display: block;
+    float: left;
+  }
+  #trangchu .nav-item {
+    font-size: 10px;
+    padding: 20px 15px;
+  }
+  #trangchu:hover .gioithieu1 {
+    display: none;
+  }
+  .card-deck {
+    display: block;
+    overflow: hidden;
+  }
+  .card {
+    display: block;
+    width: 40%;
+    float: left;
+    height: 50vw;
+    margin: 20px 20px;
+  }
+  .card img {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #trangchu .nav-item {
+    font-size: 8px;
+    padding: 10px 0;
+    margin-left: 20px;
+  }
+  article {
+    margin-top: 60px;
+  }
+  .modau {
+    height: 300px;
+  }
+  #modau2 {
+    top: 60px;
+  }
+  /*..........................*/
+  #batdaund p {
+    font-size: small;
+  }
+  #modau11 h2 {
+    font-size: large;
+  }
+  #modau11 p {
+    font-size: small;
+  }
+  /*....*/
+  .card {
+    position: relative;
+    margin-left: 55%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+  #ndchinh .card-title {
+    font-size: medium;
+  }
+  #ndchinh .card-link {
+    width: 70%;
+    padding: 5px;
+    margin-top: -5%;
+  }
+  #ndchinh img {
+    width: 80%;
+    height: auto;
+    transition: 2s;
+  }
+  /*.................*/
+  .ket:nth-child(2) {
+    display: none;
+  }
+}

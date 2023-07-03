@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script
+      src="https://kit.fontawesome.com/98d78f090f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="../anh_index/favicon (1).ico" />
+    <link rel="stylesheet" href="../css/lienhe.css" />
+    <script src="../js/index.js"></script>
+
+    <title>Classic Gin - Liên hệ</title>
+  </head>
+  <body onload="Truyxuat()">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <header>
+      <div class="container-fluid">
+        <div class="navbar navbar-expand-xl" id="trangchu">
+          <div class="navbar-brand">
+            <img src="../anh_index/icon2-removebg-preview.png" alt="logo" />
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="../html/index.html">TRANG CHỦ</a></li>
+            <li class="nav-item">
+              <a href="../html/lichsu.html">GIỚI THIỆU</a>
+              <div class="gioithieu1">
+                <a href="../html/lichsu.html">LỊCH SỬ</a>
+                <a href="../html/lichsu.html#ndchinh">KIỂU DÁNG</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../html/hangxe.html">HÃNG XE</a>
+              <div class="gioithieu1">
+                <a href="../html/hangxe.html#kawasaki">Kawasaki</a>
+                <a href="../html/hangxe.html#yamaha">Sym</a>
+                <a href="../html/hangxe.html#gpx">Yamaha</a>
+                <a href="../html/hangxe.html#sym">Gpx</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="#">LIÊN HỆ</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <aside>
+      <div class="container-fluid" id="phancauhoi">
+        <div class="cauhoi" id="cauhoi1">
+          <p>Bạn hứng thứ với vẻ đẹp đó chứ ?</p>
+        </div>
+        <div class="cauhoi" id="cauhoi2">
+          <p>Bạn có muốn có một chiếc xe mang tính cá nhân hóa không !?</p>
+          <div class="btn-group" id="luachon">
+            <button class="btn"><a href="#phanlienket">Có</a></button>
+            <button class="btn" id="luachonkhong"><a>Không</a></button>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script>
+      $("#luachonkhong").click(function () {
+        var b = prompt("Bạn có thể cho biết lí do được không...");
+        if (b == null) {
+          b = "không vì lí do gì";
+        }
+        alert("bạn không thích những chiếc xe vì  " + b + " ư??");
+        alert("thật là hết lói...");
+      });
+    </script>
+    <div id="phanlienket" class="container-fluid disabled"></div>
+    <section>
+      <div class="row">
+        <div class="col-xl-4">
+          <div>
+            <p class="tenweb">Classic-Gin</p>
+            <p>Cảm ơn bạn đã xem và quan tâm đến tôi</p>
+            <p>
+              Tôi lập ra trang web đơn giản để chia sẻ sở thích của mình với mọi
+              người, không có kiếm tiền hay đả kích bất kì ai, hãy enjoy cái
+              moment này nhé <i class="fa-solid fa-heart-pulse"></i>
+            </p>
+            <p>
+              Hãy ấn vào nút để có thể tôi có thể liên hệ với bạn
+              <span style="opacity: 0.5; font-size: small">
+                (không có đâu :>)</span
+              >
+            </p>
+            <button class="btn" id="nutthongtin" style="display: none">
+              Ghi Thông Tin
+            </button>
+          </div>
+          <script>
+            $("#nutthongtin").click(function () {
+              $("#nhapthongtin").show(50000);
+              $("#video1").hide();
+              $("#phananh").hide();
+              $("#nutvideo").css("display", "none");
+            });
+          </script>
+        </div>
+        <div class="col-xl-8">
+          <div class="container" id="video">
+            <button class="btn" id="nutvideo">
+              Ấn xem video của tui <i class="fa-regular fa-heart"></i>
+            </button>
+            <p style="font-size: small; opacity: 0.5" id="tbao">
+              nhớ bật tiếng nhé,ấn lại nút để tắt
+            </p>
+            <video autoplay controls id="video1">
+              <source src="../anhhangxe/hi/MZOW6122.MP4" />
+            </video>
+          </div>
+          <script>
+            $("#nutvideo").click(function () {
+              $("#video1").toggle();
+              $("#phananh").toggle();
+              $("#nutthongtin").css("display", "block");
+              $("#tbao").hide();
+            });
+          </script>
+          <div class="container" id="phananh">
+            <div class="carousel slide" data-ride="carousel" id="anhxe">
+              <ul class="carousel-indicators">
+                <li data-target="#anhxe" data-slide-to="0" class="active"></li>
+                <li data-target="#anhxe" data-slide-to="1"></li>
+                <li data-target="#anhxe" data-slide-to="2"></li>
+                <li data-target="#anhxe" data-slide-to="3"></li>
+              </ul>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../anh_index/cf-1.jpg" alt="" />
+                </div>
+                <div class="carousel-item">
+                  <img src="../anh_lichsu/bobber-2.jpg" alt="" />
+                </div>
+                <div class="carousel-item">
+                  <img src="../anh_lichsu/track-xetui.jpg" alt="" />
+                </div>
+                <div class="carousel-item">
+                  <img src="../anhhangxe/hi/CTFUE7494.JPG" alt="" />
+                  <div class="carousel-caption">
+                    <p>admin Classic Gin haha</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container" id="nhapthongtin">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập tên"
+                required
+                id="ten"
+              />
+              <p class="valid-feedback">Hợp lệ</p>
+              <p class="invalid-feedback">Không hợp lệ</p>
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                class="form-control"
+                pattern="[0-9]{10}"
+                required
+                placeholder="sđt(10 số)"
+                id="sdt"
+              />
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <input
+                  type="email"
+                  placeholder="nhập email"
+                  class="form-control"
+                  id="email"
+                />
+                <div class="input-group-append">
+                  <p class="input-group-text">@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="custom-file mb-3">
+              <input
+                type="file"
+                class="custom-file-input"
+                id="customFile"
+                name="filename"
+                multiple
+              />
+              <label class="custom-file-label" for="customFile"
+                >up ảnh bạn muốn chia sẻ</label
+              >
+            </div>
+            <span id="erorr"></span>
+            <script>
+              $(".custom-file-input").on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this)
+                  .siblings(".custom-file-label")
+                  .addClass("selected")
+                  .html(fileName);
+              });
+            </script>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                cols="30"
+                rows="10"
+                placeholder="Nhập ghi chú của bạn"
+                id="area"
+              ></textarea>
+            </div>
+            <div class="form-group form-check">
+              <input
+                type="checkbox"
+                name=""
+                id="dieukhoan"
+                class="form-check-inline"
+                required
+              /><label for="dieukhoan"
+                >Tôi đồng ý cho phép sử dựng dữ liệu đã nhập</label
+              >
+            </div>
+            <div class="form-group">
+              <input type="submit" onclick="submit()" id="submit" value="Gửi" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container" id="foot">
+        <div class="ket">
+          <img
+            class="logo"
+            src="../anh_index/icon2-removebg-preview.png"
+            alt="logo"
+          />
+          <p><b>Classic Gin</b></p>
+        </div>
+        <div class="ket">
+          <p>Trang web lập ra</p>
+          <p>Với mục đích duy nhẩt</p>
+          <p>Cùng mọi người ngắm xe!</p>
+        </div>
+        <div class="ket">
+          <p>Liên hệ với tôi</p>
+          <a href="https://www.facebook.com/gin.max.39/" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" id="ins"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" id="git"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <script>
+        $("#ins,#git").click(function () {
+          alert("Đừng tò mò lung tung hãy ngắm xe đi nhé ! mãi iu");
+        });
+      </script>
+    </footer>
+  </body>
+</html>

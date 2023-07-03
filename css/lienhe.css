@@ -1,0 +1,425 @@
+* {
+  box-sizing: border-box;
+}
+p,
+a,
+a:hover {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  text-decoration: none;
+}
+/*...................nav..................*/
+header {
+  background-color: rgba(27, 25, 25, 0.479);
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+header:hover {
+  background-color: rgb(27, 25, 25);
+  transition: all 0.5s;
+}
+.navbar-brand {
+  display: block;
+  width: 40%;
+}
+.navbar-brand img {
+  display: block;
+  width: 15%;
+  margin: 0px auto;
+}
+.nav-item {
+  display: block;
+  position: relative;
+  margin: 20px 40px;
+  float: left;
+  font-size: larger;
+}
+
+.nav-item a:not(.gioithieu1 a)::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgb(32, 79, 148);
+}
+.nav-item a:hover:not(.gioithieu1 a):before {
+  width: 100%;
+  transition: all 1s ease;
+}
+.nav-item:hover {
+  font-size: 20px;
+  transition: 0.5s ease;
+}
+.gioithieu1 {
+  display: none;
+}
+.gioithieu1 a {
+  display: block;
+  color: white;
+  margin-top: 10px;
+}
+.gioithieu1 a:hover {
+  transition: 0.5s ease;
+  font-weight: bold;
+  text-shadow: 3px 4px 5px rgb(53, 53, 92);
+}
+.nav-item:hover .gioithieu1 {
+  display: block;
+  position: absolute;
+}
+/*...................phancauhoi.........................*/
+#phancauhoi {
+  background-image: url(../anhhangxe/anhnenhangxe5.gif);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: right top;
+  height: 700px;
+  position: absolute;
+  top: 0;
+}
+.cauhoi {
+  display: block;
+  width: 40%;
+  padding: 20px;
+  margin-top: 200px;
+  font-size: 35px;
+}
+.cauhoi p {
+  font-family: serif;
+}
+#cauhoi1 {
+  animation: cauhoi1 2s 2s forwards;
+}
+@keyframes cauhoi1 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+#cauhoi2 {
+  opacity: 0;
+  animation: cauhoi2 2s 2s forwards;
+}
+@keyframes cauhoi2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-top: -100px;
+  }
+}
+#luachon .btn {
+  background-color: transparent;
+  padding: 20px;
+  font-size: 20px;
+  margin-left: 50px;
+  border-radius: 30px;
+  line-height: 0%;
+}
+#luachon .btn:hover {
+  background-color: rgba(15, 11, 11, 0.644);
+  transition: 0.5s;
+}
+/*.............................phanlienlet.........*/
+#phanlienket {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 8vw;
+  margin-top: 600px;
+  background-color: rgb(22, 21, 21);
+}
+/*.................section..................*/
+section {
+  border-top: 3px double rgb(0, 0, 0);
+  background-color: rgb(22, 21, 21);
+}
+/*.........................col-xl-4.......................*/
+.col-xl-4 p {
+  padding-left: 70px;
+}
+.col-xl-4 div {
+  display: block;
+  margin: 80px auto;
+}
+.tenweb {
+  font-size: 30px;
+  font-family: cursive;
+  text-indent: 20px;
+}
+#nutthongtin {
+  margin-left: 90px;
+  background-color: rgba(102, 43, 43, 0.671);
+  position: relative;
+  border-radius: 20px;
+  transition: all 0.5s;
+  z-index: 2;
+}
+#nutthongtin:hover {
+  background-color: transparent;
+  font-weight: bold;
+  transition: all 1s ease;
+}
+#nutthongtin::after {
+  content: " ";
+  position: absolute;
+  border-radius: 20px;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-image: linear-gradient(to top, rgb(26, 15, 15), rgb(151, 28, 28));
+  z-index: -1;
+}
+#nutthongtin:hover::after {
+  height: 100%;
+  transition: 1.5s ease;
+}
+
+/*............................phần ảnh...................*/
+#phananh {
+  display: block;
+  width: 70%;
+}
+.carousel-inner img {
+  display: block;
+  width: 100%;
+  height: 30vw;
+}
+/*.....................video.................*/
+#video {
+  display: block;
+  margin-left: 150px;
+}
+#video .btn {
+  display: block;
+  position: relative;
+  margin: 10px;
+  opacity: 0.5;
+  border-radius: 10px 0px;
+  background-color: rgba(85, 70, 70, 0.733);
+}
+#video .btn:hover {
+  background-color: rgb(105, 60, 60);
+  transition: 1.5s;
+  opacity: 1;
+}
+#video .btn::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: brown;
+}
+#video .btn::after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 2px;
+  width: 0;
+  background-color: brown;
+}
+#video .btn:hover::after {
+  width: 90%;
+  transition: 1.5s ease;
+}
+#video .btn:hover::before {
+  width: 90%;
+  transition: 1.5s ease;
+}
+#video video {
+  display: none;
+  width: 40%;
+}
+/*...........nhập thông tin..................*/
+#nhapthongtin {
+  display: none;
+  width: 50%;
+}
+#nhapthongtin:hover * {
+  cursor: cell;
+}
+#submit {
+  display: block;
+  width: 25%;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 20px;
+}
+#submit:hover {
+  width: 30%;
+  font-weight: bold;
+  transition: all 1s;
+}
+/*...................footer............*/
+body {
+  background-color: rgb(19, 19, 19);
+}
+#foot {
+  margin-left: 15vw;
+}
+.ket img {
+  display: block;
+  width: 20%;
+  margin: 10px;
+}
+.ket {
+  display: block;
+  width: 30%;
+  float: left;
+  text-align: left;
+  font-size: small;
+  padding-top: 20px;
+}
+.ket i {
+  font-size: 30px;
+  margin: 5px;
+}
+.ket i:hover {
+  position: relative;
+  font-size: 34px;
+  transition: 0.5s;
+}
+/*.............................................*/
+@media only screen and (max-width: 1200px) {
+  .navbar-nav .nav-item {
+    display: block;
+    font-size: small;
+    padding: 0px;
+    margin-left: 30px;
+    float: left;
+  }
+  .navbar-nav,
+  .navbar-brand {
+    display: block;
+    float: left;
+  }
+  .navbar-nav {
+    width: 80%;
+  }
+  .navbar-brand {
+    width: 10%;
+  }
+  .navbar-brand img {
+    display: block;
+    width: 70%;
+  }
+  /*................cauhoi..........*/
+  .cauhoi,
+  #luachon * {
+    font-size: large;
+  }
+  .cauhoi {
+    width: 70%;
+    margin-top: 150px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .navbar-nav .nav-item {
+    font-size: 10px;
+    margin: 10px;
+  }
+  .navbar-nav {
+    width: 70%;
+  }
+  .navbar-brand {
+    width: 20%;
+  }
+  /*................cauhoi+ phanlienket..........*/
+  #phancauhoi {
+    background-size: 100% 70%;
+  }
+  #phanlienket {
+    margin-top: 400px;
+    height: 1px;
+  }
+  /*....................col-xl-4..................*/
+  .col-xl-4 p {
+    padding-left: 40px;
+  }
+  /*.....phần ảnh+video.........*/
+  #phananh {
+    width: 100%;
+  }
+  .carousel-inner img {
+    width: 100%;
+    height: 50vw;
+  }
+  #video {
+    margin-left: 100px;
+  }
+  #video video {
+    width: 60%;
+  }
+  /*....nhap thong tin.....*/
+  #nhapthongtin {
+    width: 90%;
+  }
+  /*.....footer.........*/
+  #foot {
+    margin-left: 5vw;
+  }
+  #foot p {
+    font-size: smaller;
+  }
+  .ket {
+    line-height: 10px;
+    margin-left: 5px;
+  }
+  .ket i {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .navbar-nav .nav-item {
+    font-size: 8px;
+    margin: 0px;
+    padding-left: 15px;
+  }
+  /*...............*/
+  #phancauhoi {
+    height: 400px;
+  }
+  #cauhoi2 p {
+    font-size: smaller;
+  }
+  @keyframes cauhoi2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      margin-top: -200px;
+    }
+  }
+  /*.......*/
+  #phanlienket {
+    margin-top: 200px;
+    height: 1px;
+  }
+  #video .btn {
+    margin-left: 20%;
+    transform: translateX(-50%);
+  }
+  #video1 {
+    margin-left: 20%;
+    transform: translateX(-50%);
+  }
+  .ket:nth-child(2) {
+    display: none;
+  }
+}

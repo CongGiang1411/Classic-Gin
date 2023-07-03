@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="icon" href="../anh_index/favicon (1).ico" />
+    <script
+      src="https://kit.fontawesome.com/98d78f090f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/lichsu.js"></script>
+    <link rel="stylesheet" href="../css/lichsu.css" />
+    <title>Classic Gin-Lịch Sử</title>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <header>
+      <audio
+        src="../anh_index/Lawrence - TrackTribe.mp3"
+        autoplay
+        style="display: none"
+      ></audio>
+      <div class="container-fluid" id="trangchu">
+        <div class="navbar navbar-expand-sm" id="trangchu1">
+          <a href="../html/index.html" class="navbar-brand">
+            <img
+              class="logo"
+              src="../anh_index/icon2-removebg-preview.png"
+              alt="logo"
+            />
+          </a>
+          <ul class="navbar-nav" style="background: transparent">
+            <li class="nav-item">
+              <p><a href="../html/index.html">TRANG CHỦ</a></p>
+            </li>
+            <li class="nav-item" id="gioithieu">
+              <p><a href="../html/lichsu.html">GIỚI THiỆU</a></p>
+              <div class="gioithieu1" style="opacity: 0.7; border-radius: 30px">
+                <p><a href="../html/lichsu.html"> LỊCH SỬ</a></p>
+                <div class="dropdown">
+                  <p class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="#">KIỂU DÁNG</a>
+                  </p>
+                  <div class="dropdown-menu">
+                    <a href="#cafe" class="dropdown-item">Cafe racer</a>
+                    <a href="#chopper" class="dropdown-item">Chopper</a>
+                    <a href="#bobber" class="dropdown-item">Bobber</a>
+                    <a href="#tracker" class="dropdown-item">Tracker</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item" id="hangxe">
+              <p><a href="../html/hangxe.html">HÃNG XE</a></p>
+              <div class="gioithieu1" style="opacity: 0.7">
+                <p><a href="../html/hangxe.html#kawasaki">Kawasaki</a></p>
+                <p><a href="../html/hangxe.html#yamaha">Yamaha</a></p>
+                <p><a href="../html/hangxe.html#gpx">Gpx</a></p>
+                <p><a href="../html/hangxe.html#sym">Sym</a></p>
+              </div>
+            </li>
+            <li class="nav-item">
+              <p><a href="../html/lienhe.html">LIÊN HỆ</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section style="border-bottom: 1px solid rgba(0, 0, 0, 0.363)">
+      <div id="anhnenlichsu">
+        <div id="divanhnenlichsu">
+          <h1 style="display: inline-block; margin-top: 180px; font-size: 4vw">
+            Classic Gin
+            <img
+              style="display: inline-block; width: 15%; background: transparent"
+              src="../anh_index/icon2-removebg-preview.png"
+              alt=""
+              class="logo"
+            />
+          </h1>
+          <p class="p">Cùng nhau tìm hiểu về một số kiểu dáng độ</p>
+        </div>
+      </div>
+      <div class="alert alert-dismissible alert-danger" id="thongbao">
+        <p class="alert-item alert-danger">
+          Lưu ý: ở đây không nói sâu về mặt lịch sử, hãy tận hưởng kiểu dáng
+          trên những chiếc xe cổ điển!
+        </p>
+        <button class="close" data-dismiss="alert">&times</button>
+      </div>
+      <aside>
+        <form id="luachon">
+          <p>Bạn muốn xem kiểu dáng nào:</p>
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="luachon1"
+            /><label for="luachon1" class="custom-control-label"
+              ><a href="#cafe">Cafe racer</a></label
+            >
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="luachon2"
+            /><label for="luachon2" class="custom-control-label"
+              ><a href="#chopper">Chopper</a></label
+            >
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="luachon3"
+            /><label for="luachon3" class="custom-control-label"
+              ><a href="#bobber">Bobber</a></label
+            >
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="luachon4"
+            /><label for="luachon4" class="custom-control-label"
+              ><a href="#tracker">Tracker</a></label
+            >
+          </div>
+          <span style="font-size: 10px; opacity: 0.4"
+            >click ô để xác nhận đã xem</span
+          >
+        </form>
+        <script>
+          $("#luachon1").click(function () {
+            alert("bạn đã xem kiểu dáng cafe racer");
+          });
+          $("#luachon2").click(function () {
+            alert("Bạn đã xem kiểu dáng chopper");
+          });
+          $("#luachon3").click(function () {
+            alert("Bạn đã xem kiểu dáng bobber");
+          });
+          $("#luachon4").click(function () {
+            alert("Bạn đã xem kiểu dáng tracker");
+          });
+        </script>
+      </aside>
+      <div class="container" id="ndchinh">
+        <img
+          class="anhtrangtri"
+          src="../anh_gioithieu_ls/icon5-removebg-preview.png"
+          alt=""
+        />
+        <div id="modau">
+          <button
+            class="btn"
+            data-toggle="modal"
+            data-target="#cackieudangxe"
+            id="kieudang"
+          >
+            Ấn xem các kiểu dáng
+          </button>
+          <div id="cackieudangxe" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h1>Các kiểu dáng</h1>
+                  <img
+                    class="anhcackieudang"
+                    src="../anh_lichsu/cackieudangxe.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1
+          style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+            border-bottom: 1px solid salmon;
+          "
+        >
+          CAFE RACER
+        </h1>
+        <p>Một kiểu dáng độ trông bing chilling lắm luôn</p>
+        <p>
+          Việc độ lại sẽ khiến tối giản các chi tiết, tăng trưởng tốc độ cho xe.
+          song song giúp xe đủ nội lực điều khiển dễ dàng hơn trong cuộc đua.
+          cho nên kiểu xe Cafe racer thường có hình dáng gọn gàng, trọng lượng
+          nhẹ và dễ dàng đi qua đa phần các loại hình mặt đường. cho đến nay,
+          Cafe racer cũng được sử dụng để nói đến các dạng xe style cổ như Anh,
+          Nhật hoặc Ý.
+        </p>
+        <p>
+          Ghi đông thấp, Yên solo,...mọi thứ tạo nên một style đậm chất cổ điển
+          lại vừa bụi bặm
+        </p>
+        <div class="carousel slide" data-ride="carousel" id="cafe">
+          <ul class="carousel-indicators">
+            <li data-target="#cafe" data-slide-to="0" class="active"></li>
+            <li data-target="#cafe" data-slide-to="1"></li>
+            <li data-target="#cafe" data-slide-to="2"></li>
+          </ul>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../anh_lichsu/cafe-wolf cb750.jpg" alt="" />
+              <div class="carousel-caption">
+                <p>wolf cb750</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../anh_lichsu/cafe-XJR 1300.jpg" alt="" />
+              <div class="carousel-caption">
+                <p>XJR 1300</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../anh_lichsu/cafe.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <button
+          id="nutlichsucafe"
+          class="btn"
+          data-toggle="modal"
+          data-target="#lichsucafe"
+        >
+          nhấp vào để tìm hiểu về lịch sử cafe racer!
+        </button>
+        <div class="modal fade" id="lichsucafe">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Nguồn gốc Cafe Racer</h2>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Ngày nay cụm từ cafe racer được gán cho bất cứ chiếc môtô nào
+                  mang phong cách retro với hình dáng na ná nhau. Nhưng những
+                  người đam mê thật sự với dòng xe này mới là định nghĩa bắt
+                  nguồn của cụm từ "Cafe Racer" suốt những năm 1960 tại Anh.
+                </p>
+                <p>
+                  Rideapart cho biết có một giả thuyết rằng Cafe Racer ám chỉ
+                  những người sở hữu xe nhưng chỉ giả vờ là tay đua (racer) chứ
+                  không thực sự đua xe, thay vào đó họ thường dựng xe ở những
+                  quán cafe để chiêm ngưỡng vẻ ngoài là chính.
+                </p>
+                <figure>
+                  <img
+                    src="../anh_lichsu/Cafe-Racers-The-Early-Years.jpg"
+                    alt=""
+                  />
+                </figure>
+                <figcaption>Những cafe racer đời đầu</figcaption>
+                <p>
+                  Ngoài ra, một gợi ý khác cũng thú vị không kém. Các tay đua
+                  tập trung ở một quán cafe, đặt ra một mốc thời gian nhất định,
+                  cùng đua đến đích rồi quay lại quán cafe, nếu nằm trong khoảng
+                  thời gian đặt ra sẽ chứng tỏ mẫu xe mà mỗi người điều khiển có
+                  chạm được mốc 100 dặm/h (160 km/h) hay không. Những giả thuyết
+                  này là một phần của văn hóa truyền miệng khi người ta chưa có
+                  ý định ghi chép lại lịch sử của mỗi dòng xe.
+                </p>
+                <p>
+                  Những chiếc cafe racer đầu tiên chủ yếu là xe của Anh như
+                  Triumph, BSA, AJS hay Norton, nhưng hầu hết các mẫu xe đều
+                  chưa ưu tiên cho tốc độ. Do đó, chiếc xe nào cán được mốc 100
+                  dặm/h là một thành tích mà những người khác phải mong đợi.
+                </p>
+                <p>
+                  Để đạt được điều này, các tay lái phải nâng cấp chiếc xe của
+                  mình rất nhiều. Điều may mắn là khoảng thời gian những năm
+                  1960, nền công nghiệp môtô của Anh vẫn còn phát triển, do đó
+                  khá dễ dàng để có thể tìm kiếm những bộ phận cần thiết cho
+                  việc độ xe.
+                </p>
+                <figure>
+                  <img
+                    src="../anh_lichsu/Cafe-Racers-The-Early-Years-01.jpg"
+                    alt=""
+                  />
+                </figure>
+                <figcaption>Norton Commando Cafe Racer 1969.</figcaption>
+                <p>
+                  Sở thích độ xe tốn kém này dần phát triển trong giới chơi xe
+                  có tiền, sau mỗi một giai đoạn lại có một chuẩn mực mới cho
+                  cafe racer ra đời bởi ngay từ đầu đã không có định nghĩa nào
+                  cụ thể. Tuy nhiên thiết kế bên ngoài của một chiếc cafe racer
+                  nhìn chung có đủ những yếu tố gồm tay lái dạng thắt nút
+                  clip-on, ống xả kéo dài về phía sau, yên xe một chỗ ngồi, chế
+                  hòa khí lớn và bình xăng sợi thủy tinh hoặc nhôm.
+                </p>
+                <p>
+                  Bên cạnh đó, để chiếc xe nhẹ nhất có thể khi tăng tốc, xe tối
+                  giản các bộ phận không cần thiết. Ở bình xăng, giống như các
+                  xe thể thao, phần gần với yên xe thường được làm lõm vào tạo
+                  chỗ bám cho đầu gối khi cần rạp người tăng tốc. Đây cũng là
+                  cảm hứng để những chiếc xe đua sau này ra đời.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <p>Classic Gin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1
+          style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+            border-bottom: 1px solid salmon;
+          "
+        >
+          Chopper
+        </h1>
+        <p>
+          Chopper -Vị vua của đường phố. Những chiếc Chopper với kiểu dáng lịch
+          lãm, đầy quyến rũ đã khiến các chàng trai không ngừng mê mẩn. Đặc
+          biệt, khi ngồi lái tạo cảm giác như một vị vua đang tận hưởng những
+          cung đường.
+        </p>
+        <p>
+          Về kết cấu, xe Chopper có kiểu khung xe được thiết kế dạng Cruiser
+          hoặc kiểu truyền thống nhưng sẽ được phá cách đi. Theo quan sát, những
+          mẫu Chopper sẽ có phần yên xe được đẩy lùi về phía sau còn phần tay
+          lái sẽ được kéo dài để tạo sự thoải mái và điều khiển dễ dàng hơn.
+        </p>
+        <p>
+          Động cơ xe của dòng xe Chopper có một đặc điểm bất thành văn đó là nó
+          sẽ được phô hoàn toàn ra bên ngoài chứ không che lại trông khá hầm hố.
+        </p>
+        <div class="carousel slide" id="chopper" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#chopper" data-slide-to="0" class="active"></li>
+            <li data-target="#chopper" data-slide-to="1"></li>
+            <li data-target="#chopper" data-slide-to="2"></li>
+          </ul>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../anh_lichsu/chopper-1.jpg" class="anhc" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../anh_lichsu/chopper-2.jpg" class="anhc" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../anh_lichsu/chopper-3.jpg" class="anhc" alt="" />
+            </div>
+          </div>
+        </div>
+        <button class="btn" data-toggle="modal" data-target="#lichsuchopper">
+          Tìm hiểu về lịch sử chopper
+        </button>
+        <div class="modal fade" id="lichsuchopper">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Chopper</h2>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Theo như tìm hiểu, Chopper được lấy cảm hứng từ những mẫu xe
+                  Bobber có từ những năm 1940. Chữ Bobber cũng bắt nguồn từ chữ
+                  “bob” – nghĩa là “cắt cụt”.
+                </p>
+                <p>
+                  Lịch sử chopper bắt đầu sau Thế chiến II. Các cựu quân nhân
+                  muốn có những chiếc môtô giống như loại thấy hoặc được lái
+                  trong chiến tranh. Họ mua các loại xe khác về, độ lại. Rất
+                  nhiều người thích tháo chắn bùn trước. Chắn bùn sau cắt ngắn
+                  còn được gọi là “chắn bùn bobbers”.
+                </p>
+                <p>
+                  Một trong những điểm tiên quyết khi dựng xe chopper là hai
+                  thông số góc choãi và vệt bánh. Góc choãi là góc hợp bởi đường
+                  tâm cổ trên khung và đường thẳng đứng. Góc choãi càng lớn bánh
+                  trước càng được đẩy ra xa khung.
+                </p>
+                <img src="../anh_lichsu/chopper-4.jpg" alt="" />
+                <p>
+                  Để làm tăng góc choãi mà không làm vệt quá rộng, một vài xe sử
+                  dụng chảng ba. Đây là cụm chi tiết liên kết phuộc với cổ lái
+                  trên khung thường. Một bộ thường gồm 2 chi tiết có kích thước
+                  giống hệt nhau để phuộc trước song song với cổ. Nếu 2 chi tiết
+                  này có kích thước khác nhau, chúng sẽ làm phuộc chéo so với
+                  cổ.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <p>Classic-Gin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1
+          style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+            border-bottom: 1px solid salmon;
+          "
+        >
+          Bobber
+        </h1>
+        <p>
+          Ít phổ dụng hơn người anh em của mình là Chopper, Bobber là một thú
+          chơi nằm chìm dưới bề mặt của dòng chảy lịch sử xe độ Mỹ. Không ồn ào,
+          không phô trương, nhưng sức sống của nó bền bỉ và truyền cảm hứng cho
+          nhiều thế hệ người yêu xe khắp thế giới.
+        </p>
+        <p>
+          Về mặt tổng thể, Bobber ngày nay vẫn thường dựa trên bộ khung hardtail
+          cruiser (không giảm xóc sau) và tuân thủ nguyên tắc ngắn- gọn. Nếu đem
+          so một chiếc Bobber với một chiếc Chopper hiện đại có thể nhìn ra ngay
+          sự khác biệt. Trong khi Chopper có dáng dài với góc phuộc lớn (thường
+          là trên 50 độ) cùng với ghi đông kềnh càng thì Bobber ngắn tương đương
+          một chiếc mô tô thông thường.
+        </p>
+        <div class="carousel slide" id="bobber" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#bobber" data-slide-to="0" class="active"></li>
+            <li data-target="#bobber" data-slide-to="1"></li>
+            <li data-target="#bobber" data-slide-to="2"></li>
+          </ul>
+          <div class="carousel-dialog">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../anh_lichsu/bobber-1.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="../anh_lichsu/bobber-2.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="../anh_lichsu/bobber-3.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn" data-toggle="modal" data-target="#lichsubobber">
+          Bạn có muốn xem lịch sử Bobber
+        </button>
+        <div class="modal fade" id="lichsubobber">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Bobber</h2>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Thay vì một nguồn gốc nam tính nào đó, cái tên Bobber được
+                  thửa từ kiểu đầu bob rất phổ thông của phụ nữ những năm 1920 –
+                  1930. Đó là thời kỳ đánh dấu cho nhiều biến chuyển trong tư
+                  tưởng của phụ nữ Mỹ.
+                </p>
+                <p>
+                  Họ muốn thoát khỏi những chuẩn mực của bà, của mẹ mình – những
+                  người phụ nữ thanh lịch mang phong cách Victorian. Và mái tóc
+                  chính là thứ đầu tiên được chọn để thể hiện sự nổi loạn – cắt
+                  cụt nó đi. Từ đó về sau, thuật ngữ “bob” được sử dụng để chỉ
+                  việc cắt cụt và trở thành tiêu chí làm xe Bobber.
+                </p>
+                <p>
+                  Bobber thường được độ dựa trên nguyên bản cruiser của Harley
+                  Davidson, rất phổ biến vào khoảng thập niên 1940 – 1950. Vào
+                  thời kỳ đầu, người ta làm Bobber đơn thuần bằng cách tháo gỡ
+                  những bộ phận ít quan trọng trên xe như cốp, đèn xi nhan,
+                  gương chiếu hậu, và ghế sau.
+                </p>
+                <figure><img src="../anh_lichsu/bobber-4.jpg" alt="" /></figure>
+                <figcaption>
+                  Một chiếc Bobber khá giống đời đầu, chạy động cơ Knucklehead
+                  của Harley, ghi đông Flanders 0, bình xăng nguyên gốc, vè chắn
+                  bùn bị cắt cụt, đèn hậu Sparto.
+                </figcaption>
+                <p>
+                  Vào thời kỳ ấy, việc độ Bobber dường như khá phổ biến. Bất kỳ
+                  chiếc xe nào bị chủ nhân ngứa tay cắt gọt đều có thể xếp vào
+                  Bobber. Bobber khi đó chưa phải một dòng xe, dù là chủ chốt
+                  hay thứ phát, trong thế giới xe độ.
+                </p>
+                <p>
+                  Khi việc độ xe đơn giản đã trở thành thói quen của dân chơi
+                  xe, người ta bắt đầu tiến sâu hơn vào những căn chỉnh tối giản
+                  xe. Bất kỳ bộ phận nào bị coi là thừa đều bị lược bỏ, từ các
+                  pát, vè chắn bùn cho đến tấm chắn gầm xe. Ghi đông Flanders #1
+                  được ưa chuộng, cao hơn và hẹp hơn. Bình xăng nguyên bản 13L
+                  cũng được tháo đôi ra, cắt đi một nửa và hàn lại để tạo thành
+                  bình xăng mới nhỏ gọn hơn. Bước tiến này tạo ra những chiếc
+                  Chopper thế hệ đầu tiên, chuyển tiếp từ Bobber, xuất hiện từ
+                  cuối những năm 1950, đầu 1960.​
+                </p>
+                <figure><img src="../anh_lichsu/bobber-5.jpg" alt="" /></figure>
+                <figcaption>
+                  Chopper đời đầu – Sự chuyển tiếp từ Bobber.
+                </figcaption>
+                <p>
+                  Đến cuối thập kỷ 1960, những chiếc Chopper thực thụ ra đời khi
+                  phuộc trước của chúng được kéo dài ra và nhoài về phía trước.
+                  Cũng từ thời điểm này, Chopper bước lên đỉnh vinh quang, trở
+                  nên phổ biến trong giới chơi xe độ Mỹ, và Bobber lùi về khiêm
+                  tốn trong cộng đồng nhỏ bé của mình.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <p>Classic Gin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1
+          style="
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+              sans-serif;
+            border-bottom: 1px solid salmon;
+          "
+        >
+          Tracker
+        </h1>
+        <p>
+          Dòng xe Tracker được gọi với tên gọi đầy đủ là Street Tracker. Street
+          Tracker khoác trên mình vẻ đẹp vừa mượt mà vừa quyến rũ. Đây là dòng
+          xe mang trong mình hai dòng máu vừa vinh quang của Flat Track và đầy
+          kiêu hãnh của dòng xe Dirt Track.
+        </p>
+        <p>
+          Tracker sở hữu nét thiết kế với những đường cong đầy sự quyến rũ của
+          dòng Flat Track và sức mạnh tối đa từ dòng Dirt Track. Đặc biệt hơn cả
+          là Trackẻ hội tụ đầy đủ những yếu tố hợp pháp để lưu thông trên đường
+          phố một cách hợp pháp.
+        </p>
+        <p>
+          Tổng thể, dòng xe Tracker mang phong cách của Mỹ từ những năm 1930 –
+          1960 với vóc dáng thon dài và có chiều cao tầm trung. Tư thế cưỡi đặc
+          trưng của mẫu xe này là bàn chân được đặt về phía trước, tay hướng lên
+          cao.
+        </p>
+        <p>
+          Yên xe như một chiếc bánh mì, có chiều dài lớn, thường thẳng hoặc hơi
+          vuốt cong để có thể chở được hai người hoặc chở được nhiều đồ.
+        </p>
+        <div class="carousel slide" id="tracker" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#tracker" data-slide-to="0" class="active"></li>
+            <li data-target="#tracker" data-slide-to="1"></li>
+            <li data-target="#tracker" data-slide-to="2"></li>
+          </ul>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../anh_lichsu/tracker-1.jpg" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../anh_lichsu/tracker-2.jpg" alt="" />
+            </div>
+            <div class="carousel-item">
+              <img src="../anh_lichsu/track-xetui.jpg" alt="" />
+              <div class="carousel-caption">
+                <p>xe của tui đó hehe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn" data-toggle="modal" data-target="#lichsutracker">
+          Lịch sử phong cách Tracker
+        </button>
+        <div class="modal fade" id="lichsutracker">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Tracker</h2>
+              </div>
+              <div class="modal-body">
+                <p>
+                  Ở những năm 60, 70 của thế kỷ 20, một trong những sự kiện thể
+                  thao lớn nhất nổi tiếng trên thế giới chính là giải đua Grand
+                  National Championship. Đây là nơi hội tụ những cỗ máy tốc độ,
+                  chính điều này đã thôi thúc các tay đua muốn mang những cỗ máy
+                  này ra khỏi trường đua.
+                </p>
+                <p>
+                  Tuy nhiên, trở ngại lớn nhất ở đây chính là dòng xe Flat Track
+                  không được phép lưu thông trên đường phố. Bởi vì chúng không
+                  được trang bị đầy đủ những bộ phận dân dụng theo quy định gồm
+                  đèn pha, gương chiếu hậu và thậm chỉ chúng cũng không có hệ
+                  thống phanh trước…
+                </p>
+                <figure>
+                  <img src="../anh_lichsu/Flat-Tracker.jpg" alt="" />
+                </figure>
+                <figcaption>
+                  Flat Tracker, dòng xe đua không có hệ thống đèn
+                </figcaption>
+                <p>
+                  Nhưng vì mong muốn được sử dụng chúng hàng ngày trên đường phố
+                  nên các tay đua đã tiến hành độ mẫu xe này thay thế linh kiện
+                  cho chúng để chúng có thể lưu thông trên đường hợp pháp.
+                  Tracker đã được các tay chơi xe trang bị đầy đủ hệ thống đèn,
+                  xi-nhan, gương….Kể từ đó, dòng xe Tracker bắt đầu xuất hiện
+                  trên đường phố.
+                </p>
+                <figure>
+                  <img
+                    src="https://darwinmotors.com/wp-content/uploads/2020/01/binh-xang-tracker-tron-tria.jpg"
+                    alt=""
+                  />
+                </figure>
+                <figcaption>
+                  Bình xăng, hệ thống đèn, yên được thay đổi so với ban đầu
+                </figcaption>
+              </div>
+              <div class="modal-footer">
+                <p>Classic Gin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p>
+          Còn một số kiểu dáng độ nữa cũng rất phong cách, nhưng mà tôi lười quá
+          không viết nữa...
+        </p>
+        <hr />
+      </div>
+      <div id="thecard">
+        <div class="myCard">
+          <div class="innerCard">
+            <div class="frontSide">
+              <p class="title">Chụp hình cùng chiến mã</p>
+              <p>Ảnh của tôi--&gt</p>
+            </div>
+            <div class="backSide">
+              <img
+                class="card-img-overlay"
+                src="../anh_lichsu/IMG_7313.JPG"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container" id="foot">
+        <div class="ket">
+          <img
+            class="logo"
+            src="../anh_index/icon2-removebg-preview.png"
+            alt="logo"
+          />
+          <p><b>Classic Gin</b></p>
+        </div>
+        <div class="ket">
+          <p>Trang web lập ra</p>
+          <p>Với mục đích duy nhẩt</p>
+          <p>Cùng mọi người ngắm xe!</p>
+        </div>
+        <div class="ket">
+          <p>Liên hệ với tôi</p>
+          <a href="https://www.facebook.com/gin.max.39/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" id="ins"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" id="git"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <script>
+        $("#ins,#git").click(function () {
+          alert("Đừng tò mò lung tung hãy ngắm xe đi nhé ! mãi iu");
+        });
+      </script>
+    </footer>
+  </body>
+</html>
