@@ -138,7 +138,7 @@
             đời từ nhiều thập niên trước hoặc là những mẫu xe mới có thiết kế và
             kiểu dáng tương tự như vậy.
           </p>
-          <p>
+          <p id="title_history">
             Thường thì những dòng xe Classic mang xu hướng rất đơn giản với kiểu
             dáng dễ dàng nhận diện như thiết kế hai bánh, đèn tròn, bình xăng
             gọn gàng phía trước, yên đơn trải dài từ trước ra sau, hai ốp nhỏ
@@ -187,17 +187,17 @@
             />
             <script>
               $(".anh").click(function () {
-                $(".anhh").toggle(4000);
+                $(".anhh").toggle();
                 $(".anhh1").hide();
                 $(".anhh2").hide();
               });
               $(".anh1").click(function () {
-                $(".anhh1").toggle(4000);
+                $(".anhh1").toggle();
                 $(".anhh").hide();
                 $(".anhh2").hide();
               });
               $(".anh2").click(function () {
-                $(".anhh2").toggle(4000);
+                $(".anhh2").toggle();
                 $(".anhh1").hide();
                 $(".anhh").hide();
               });
@@ -309,10 +309,8 @@
         </h2>
       </div>
       <div class="row">
-        <div class="col-lg-5" style="display: block; margin-left: 130px">
+        <div class="col-lg-7" id="sourcevideo">
           <video
-            width="600"
-            height="300"
             controls
             autoplay
             src="../anh_index/Teaser - Lost Boys Cafe Racer Crew México 2.1.mp4"
@@ -339,192 +337,224 @@
         style="border-bottom: 3px double darkred; padding-top: 15px"
         id="nhagpx"
       >
-        <b> Nhà gpx</b>
+        <b
+          ><button onclick="Xemxe('xegpx')">
+            Nhà gpx <i class="fa-solid fa-motorcycle"></i>
+          </button>
+        </b>
       </h2>
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/gpx-legend-150-removebg-preview.png"
-              class="card-img-top"
-              alt="ảnh gpx-legend-150"
-            />
-            <h3 class="card-title">gpx-legend-150</h3>
-            <a class="card-link" href="../html_xe/legend_150.html"
-              >Tìm hiểu thêm...</a
-            >
+      <div id="xegpx">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/gpx-legend-150-removebg-preview.png"
+                class="card-img-top"
+                alt="ảnh gpx-legend-150"
+              />
+              <h3 class="card-title">gpx-legend-150</h3>
+              <a class="card-link" href="../html_xe/legend_150.html"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/GPX-Legend-Gentleman-200-removebg-preview.png"
+                class="card-img-top"
+                alt="ảnh gpx-gentleman-200"
+              />
+              <h3 class="card-title">gpx-gentleman-200</h3>
+              <a class="card-link" href="../html_xe/gentleman_200.html"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/gpx-legend-twin-250-removebg-preview.png"
+                class="card-img-top"
+                alt="ảnh gpx-legend-twin-250w"
+              />
+              <h3 class="card-title">gpx-twin-250</h3>
+              <a class="card-link" href="../html_xe/twin_250.html"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/GPX-Legend-Gentleman-200-removebg-preview.png"
-              class="card-img-top"
-              alt="ảnh gpx-gentleman-200"
-            />
-            <h3 class="card-title">gpx-gentleman-200</h3>
-            <a class="card-link" href="../html_xe/gentleman_200.html"
-              >Tìm hiểu thêm...</a
-            >
+        <div class="card-deck">
+          <div class="card" id="card-lg200">
+            <div class="card-body">
+              <img
+                src="../anh_xe/Legend-200-removebg-preview.png"
+                class="card-img-top"
+                alt="ảnh gpx-legend-200"
+              />
+              <h3 class="card-title">gpx-legend-200</h3>
+              <a class="card-link" href="../html_xe/legend_200.html"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/gpx-legend-twin-250-removebg-preview.png"
-              class="card-img-top"
-              alt="ảnh gpx-legend-twin-250w"
-            />
-            <h3 class="card-title">gpx-twin-250</h3>
-            <a class="card-link" href="../html_xe/twin_250.html"
-              >Tìm hiểu thêm...</a
-            >
+          <div class="card disabled">
+            <div class="card-body">
+              <p class="card-text">cập nhật sau...</p>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/Legend-200-removebg-preview.png"
-              class="card-img-top"
-              alt="ảnh gpx-legend-200"
-            />
-            <h3 class="card-title">gpx-legend-200</h3>
-            <a class="card-link" href="../html_xe/legend_200.html"
-              >Tìm hiểu thêm...</a
-            >
+          <div class="card disabled">
+            <div class="card-body"></div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <p class="card-text">cập nhật sau...</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body"></div>
         </div>
       </div>
       <h2
         style="border-bottom: 3px double rgba(6, 225, 83, 0.746)"
         id="nhakawasaki"
       >
-        <b>Nhà Kawasaki</b>
+        <b
+          ><button onclick="Xemxe('xekawasaki')">
+            Nhà Kawasaki <i class="fa-solid fa-road"></i>
+          </button>
+        </b>
       </h2>
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <img src="../anh_xe/W175.png" alt="ảnh w175" class="card-img-top" />
-            <h3 class="card-title">kawasaki-w175</h3>
-            <a href="../html_xe/W175.html" class="card-link"
-              >Tìm hiểu thêm...</a
-            >
+      <div id="xekawasaki">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/W175.png"
+                alt="ảnh w175"
+                class="card-img-top"
+              />
+              <h3 class="card-title">kawasaki-w175</h3>
+              <a href="../html_xe/W175.html" class="card-link"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <img src="../anh_xe/W800.png" alt="ảnh w800" class="card-img-top" />
-            <h2 class="card-title">kawasaki-w800</h2>
-            <a href="../html_xe/W800.html" class="card-link"
-              >Tìm hiểu thêm...</a
-            >
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/W800.png"
+                alt="ảnh w800"
+                class="card-img-top"
+              />
+              <h3 class="card-title">kawasaki-w800</h3>
+              <a href="../html_xe/W800.html" class="card-link"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <p class="card-text">cập nhật sau...</p>
+          <div class="card disabled">
+            <div class="card-body">
+              <p class="card-text">cập nhật sau...</p>
+            </div>
           </div>
         </div>
       </div>
       <h2
-        style="border-bottom: 2px double rgba(245, 245, 245, 0.396)"
+        style="border-bottom: 2px double rgba(194, 157, 157, 0.664)"
         id="nhayamaha"
       >
-        Nhà Yamaha
+        <button onclick="Xemxe('xeyamaha')">
+          Nhà Yamaha <i class="fa-regular fa-snowflake"></i>
+        </button>
       </h2>
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/xsr-155.png"
-              alt="ảnh xsr155"
-              class="card-img-top"
-            />
-            <h3 class="card-title">yamaha-xsr155</h3>
-            <a href="../html_xe/Xsr-155.html" class="card-link"
-              >Tìm hiểu thêm...</a
-            >
+      <div id="xeyamaha">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/xsr-155.png"
+                alt="ảnh xsr155"
+                class="card-img-top"
+              />
+              <h3 class="card-title">yamaha-xsr155</h3>
+              <a href="../html_xe/Xsr-155.html" class="card-link"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/yb-125.png"
-              alt="ảnh yb125"
-              class="card-img-top"
-            />
-            <h3 class="card-title">yamaha-yb125</h3>
-            <a href="../html_xe/Yb-125.html" class="card-link"
-              >Tìm hiểu thêm...</a
-            >
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/yb-125.png"
+                alt="ảnh yb125"
+                class="card-img-top"
+              />
+              <h3 class="card-title">yamaha-yb125</h3>
+              <a href="../html_xe/Yb-125.html" class="card-link"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <p class="card-text">cập nhật sau</p>
+          <div class="card disabled">
+            <div class="card-body">
+              <p class="card-text">cập nhật sau</p>
+            </div>
           </div>
         </div>
       </div>
-      <h2 style="border-bottom: 2px double black" id="nhasym">Nhà Sym</h2>
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/husky-150.png"
-              alt="ảnh husky-150"
-              class="card-img-top"
-            />
-            <h3 class="card-title">sym-husky150</h3>
-            <a href="../html_xe/husky_150.html" class="card-link"
-              >Tìm hiểu thêm...</a
-            >
+      <h2 style="border-bottom: 2px double rgb(133, 121, 18)" id="nhasym">
+        <button onclick="Xemxe('xesym')">
+          Nhà Sym <i class="fa-solid fa-dog"></i>
+        </button>
+      </h2>
+      <div id="xesym">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/husky-150.png"
+                alt="ảnh husky-150"
+                class="card-img-top"
+              />
+              <h3 class="card-title">sym-husky150</h3>
+              <a href="../html_xe/husky_150.html" class="card-link"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <img
-              src="../anh_xe/sym-husky-125.png"
-              alt="ảnh husky125"
-              class="card-img-top"
-            />
-            <h3 class="card-title">sym-husky125</h3>
-            <a href="../html_xe/husky_125.html" class="card-link"
-              >Tìm hiểu thêm...</a
-            >
+          <div class="card">
+            <div class="card-body">
+              <img
+                src="../anh_xe/sym-husky-125.png"
+                alt="ảnh husky125"
+                class="card-img-top"
+              />
+              <h3 class="card-title">sym-husky125</h3>
+              <a href="../html_xe/husky_125.html" class="card-link"
+                >Tìm hiểu thêm...</a
+              >
+            </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-body" onmouseover="A()" onmouseleave="B()">
-            <img
-              src="../anh_xe/wolf 125.png"
-              id="xeadmin1"
-              class="card-imh-top"
-              alt="ảnh wolf125"
-            />
-            <img
-              src="../anh_xe/IMG_6121.png"
-              id="xeadmin2"
-              style="display: none; z-index: -1; position: relative"
-              class="card-img-top"
-              alt=""
-            />
-            <h3 class="card-title">
-              sym-wolf125
-              <span style="font-size: 10px; opacity: 0.7">xe của admin đó</span>
-            </h3>
-            <a href="../html_xe/wolf125.html" class="card-link"
-              >Ấn vô! Phải ấn vô</a
-            >
+          <div class="card">
+            <div class="card-body" onmouseover="A()" onmouseleave="B()">
+              <img
+                src="../anh_xe/wolf 125.png"
+                id="xeadmin1"
+                class="card-imh-top"
+                alt="ảnh wolf125"
+              />
+              <img
+                src="../anh_xe/IMG_6121.png"
+                id="xeadmin2"
+                style="display: none; z-index: -1; position: relative"
+                class="card-img-top"
+                alt=""
+              />
+              <h3 class="card-title">
+                sym-wolf125
+                <span style="font-size: 10px; opacity: 0.7"
+                  >xe của admin đó</span
+                >
+              </h3>
+              <a href="../html_xe/wolf125.html" class="card-link"
+                >Ấn vô! Phải ấn vô</a
+              >
+            </div>
           </div>
         </div>
       </div>

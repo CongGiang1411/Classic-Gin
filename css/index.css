@@ -1,8 +1,11 @@
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
   background-color: #1c1c1c;
   color: white;
   z-index: 0;
+}
+html {
+  box-sizing: border-box;
 }
 p,
 a,
@@ -20,8 +23,6 @@ html {
   position: fixed;
   z-index: 2;
   width: 100%;
-  background-color: rgb(37, 30, 30);
-  background-repeat: repeat;
 }
 .navbar-brand {
   width: 40%;
@@ -33,18 +34,21 @@ html {
 }
 .navbar-nav .nav-item {
   display: inline-block;
-  padding: 20px 40px 0px 30px;
+  padding: 20px 40px 0px 40px;
   margin-top: 10px;
   font-size: larger;
 }
+/* 1a */
 .navbar-nav .nav-item:hover {
-  font-size: 22px;
-  text-shadow: 1px 1px 2px wheat, 0 0 25px red, 0 0 5px rgb(39, 1, 1);
+  text-shadow: 1px 1px 10px wheat, 0 0 35px red, 0 0 10px rgb(39, 1, 1);
   transition: all 0.5s;
 }
-#trangchu * {
-  background-color: rgb(37, 30, 30);
+/* 1a */
+.nav-item:hover p {
+  border-bottom: 1px solid salmon;
+  transition: all 0.5s ease;
 }
+
 .gioithieu1 {
   display: none;
   position: absolute;
@@ -71,9 +75,9 @@ html {
 }
 .carousel-inner img {
   display: block;
-  margin: 0px auto;
   width: 100%;
   height: 580px;
+  object-fit: cover;
 }
 .carousel-caption * {
   width: 23%;
@@ -102,12 +106,15 @@ html {
 }
 .btn-group-lg img {
   display: inline-block;
+  object-fit: cover;
+  padding: 0 10px;
   width: 100%;
 }
-.btn-group-lg .btn {
+.btn-group-lg .btn:not(#nut) {
   padding: 0px;
   margin: 5px 30px;
 }
+
 .btn-group-lg .btn:hover:not(#nut) {
   background-color: rgb(138, 37, 37);
   border-radius: 10px;
@@ -116,6 +123,7 @@ html {
 .btn .anh,
 .anh1,
 .anh2 {
+  object-fit: cover;
   border: 2px double black;
   border-radius: 10px;
 }
@@ -134,7 +142,7 @@ html {
 }
 #ndphu1 {
   position: sticky;
-  top: 40px;
+  top: 100px;
   width: 100%;
   opacity: 0.1;
   border: 5px inset rgb(46, 32, 28);
@@ -149,12 +157,15 @@ html {
   margin-top: 20px;
   font-size: small;
 }
-#ndphu1 img {
+.media img {
   display: block;
+  position: relative;
   width: 20%;
+  height: 50px;
 }
 
 #ndphu1 .media:hover img {
+  object-fit: cover;
   width: 25%;
   transition: 0.5s;
 }
@@ -168,7 +179,7 @@ section::after {
   display: table;
   content: " ";
 }
-
+/* ... */
 .dropdown-toggle {
   display: block;
   width: 20%;
@@ -176,6 +187,13 @@ section::after {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.444);
   border-radius: 20px;
+}
+.dropdown-toggle:hover {
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.444),
+    rgb(163, 16, 16)
+  );
 }
 .dropdown-menu {
   background-color: rgba(0, 0, 0, 0.444);
@@ -185,8 +203,12 @@ section::after {
   color: white;
 }
 .dropdown-menu .dropdown-item:hover {
-  background-color: rgba(0, 0, 0, 0.521);
-  border-radius: 20px;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.444),
+    rgb(134, 15, 15)
+  );
+  border-radius: 10px;
   font-size: large;
 }
 #anhnenan {
@@ -231,6 +253,15 @@ section::after {
   padding: 12px 0px;
   background-color: rgb(19, 19, 19);
 }
+#sourcevideo {
+  display: flex;
+  justify-content: center;
+}
+video {
+  width: 600px;
+  height: 300px;
+}
+
 #cmtvideo p {
   display: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -245,12 +276,37 @@ section::after {
 #XE *:not(a) {
   background-color: rgb(16, 16, 16);
 }
+#XE button {
+  display: block;
+  border: 3px solid #101010;
+  border-radius: 10px 30px;
+  cursor: inherit;
+  opacity: 0.7;
+  z-index: 1;
+}
+#XE button:hover {
+  transform: translateX(5vw);
+  opacity: 1;
+  transition: all 1s ease-in;
+}
+#xegpx,
+#xekawasaki,
+#xeyamaha,
+#xesym {
+  display: none;
+  transition: all 2s ease-in;
+}
+#XE h2:not(h2:nth-child(1)) {
+  margin-top: 2vw;
+}
+
 /*.....................................................*/
 .card {
   display: block;
   position: relative;
   margin: 30px 20px;
   border: none;
+  background: transparent;
 }
 .card img {
   display: block;
@@ -264,19 +320,36 @@ section::after {
 .card .card-link {
   display: block;
   margin: 0px 7vw;
-  padding: 1px;
-  background-color: rgba(0, 0, 0, 0.493);
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.699);
   border-radius: 10px;
 }
-.card img:hover:not(#xeadmin2) {
+.card:hover h3,
+.card:hover a {
+  opacity: 0.4;
+  transition: all 1s;
+}
+.card::before {
+  content: "";
   position: absolute;
-  width: 81%;
-  margin: 0 auto;
+  left: 20%;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background-color: red;
+  z-index: 1;
+}
+.card:hover::before {
+  width: 60%;
+  transition: all 1s ease-in;
 }
 .card .card-link:hover {
-  border: 2px outset rgb(83, 22, 22);
-  transition: 0.5s;
+  opacity: 1;
+  border-bottom: 2px solid salmon;
+  transform: translateX(1vw);
+  transition: 0.2s;
 }
+
 .card .card-text {
   margin-top: 18vw;
 }
@@ -378,9 +451,6 @@ body {
   }
 }
 @media only screen and (max-width: 580px) {
-  #trangchu {
-    position: relative;
-  }
   #trangchu *:not(.gioithieu1) {
     display: block;
     float: left;
@@ -401,8 +471,11 @@ body {
     margin-left: 50%;
     transform: translate(-50%, -50%);
   }
-  .card:nth-child(1) {
-    margin-top: 30%;
+  .card:not(#card-lg200):nth-child(1) {
+    margin-top: 40%;
+  }
+  .disabled {
+    display: none;
   }
   .card img {
     height: auto;
@@ -424,12 +497,22 @@ body {
     width: 80%;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   #trangchu .nav-item {
     display: inline-block;
-    font-size: 8px;
-    padding: 0;
-    margin-left: 10px;
+    font-size: 9px;
+    padding: 1rem 0 0 0;
+    margin: 0;
+  }
+  #title_history {
+    display: none;
+    visibility: hidden;
+  }
+  .nav-item:nth-child(1) {
+    margin-left: -2vw;
+  }
+  #trangchu .nav-item:not(.nav-item:nth-child(1)) {
+    margin-left: 3vw;
   }
   .carousel-inner img {
     height: 200px;
@@ -437,9 +520,23 @@ body {
   .carousel-caption * {
     font-size: 10px;
   }
-  .col-lg-5 video {
-    width: 300px;
-    margin-left: -110px;
+  #ndchinh {
+    width: 100%;
+    margin: 0;
+  }
+  .btn-group-lg {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .btn-group-lg .btn:not(#nut) {
+    margin: 0;
+  }
+  video {
+    width: 400px;
+    height: 200px;
+  }
+  #nut {
+    display: none;
   }
   .ket:nth-child(2) {
     display: none;

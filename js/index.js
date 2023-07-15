@@ -52,3 +52,50 @@ function Truyxuat() {
 
   localStorage.setItem("nguoi", JSON.stringify(nguoi));
 }
+function Xemxe(value) {
+  document.getElementById(value).style.display = "block";
+  document.getElementById(value).style.border = "none";
+  if (value == "xegpx") {
+    document.getElementById("xekawasaki").style.display = "none";
+    document.getElementById("xeyamaha").style.display = "none";
+    document.getElementById("xesym").style.display = "none";
+  } else if (value == "xekawasaki") {
+    document.getElementById("xegpx").style.display = "none";
+    document.getElementById("xeyamaha").style.display = "none";
+    document.getElementById("xesym").style.display = "none";
+  } else if (value == "xeyamaha") {
+    document.getElementById("xegpx").style.display = "none";
+    document.getElementById("xekawasaki").style.display = "none";
+    document.getElementById("xesym").style.display = "none";
+  } else if (value == "xesym") {
+    document.getElementById("xegpx").style.display = "none";
+    document.getElementById("xeyamaha").style.display = "none";
+    document.getElementById("xekawasaki").style.display = "none";
+  } else {
+    document.getElementById(value).style.display = "none";
+  }
+}
+//show
+function Show() {
+  let height = window.scrollY;
+  if (height > 250) {
+    try {
+      document.getElementById("showkawasaki").id = "show_xe";
+    } catch (error) {}
+  }
+  if (height > 550) {
+    try {
+      document.getElementById("showgpx").setAttribute("id", "show_xe");
+    } catch (error) {}
+  }
+  if (height > 1250) {
+    try {
+      document.getElementById("showyamaha").setAttribute("id", "show_xe");
+    } catch (error) {}
+  }
+  if (height > 1500) {
+    try {
+      document.getElementById("showsym").setAttribute("id", "show_xe");
+    } catch (error) {}
+  }
+}

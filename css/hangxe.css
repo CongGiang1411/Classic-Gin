@@ -1,7 +1,10 @@
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
   text-decoration: none;
   color: white;
+}
+html {
+  box-sizing: border-box;
 }
 p,
 a,
@@ -15,17 +18,10 @@ html {
 }
 #trangchu {
   display: block;
-  position: fixed;
-  width: 100%;
+  position: sticky;
+  top: 0;
   background-color: #302125;
   z-index: 2;
-}
-header {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100vw;
-  top: 0;
 }
 .navbar-brand {
   width: 40%;
@@ -37,36 +33,38 @@ header {
 }
 .navbar-nav .nav-item {
   display: block;
-  padding: 20px 40px 0 30px;
+  padding: 20px 40px 0 40px;
   font-size: larger;
 }
 .navbar-nav .nav-item:hover {
-  font-size: 22px;
   text-shadow: 3px 3px 3px rgba(247, 0, 255, 0.63), 0 0 35px rgb(47, 12, 48),
     0 0 10px rgb(86, 7, 117);
   transition: all 0.5s;
 }
+.nav-item:hover p {
+  border-bottom: 1px solid salmon;
+  transition: all 0.5s ease;
+}
 .nav-item .gioithieu1 {
   display: none;
+}
+.gioithieu1 p:hover {
+  border-bottom: 1px solid rgb(253, 25, 0);
 }
 .nav-item:hover .gioithieu1 {
   display: block;
   width: 10%;
   position: absolute;
+  background-color: #382e319c;
+  border-radius: 20px;
 }
 .navbar-brand img:hover {
-  filter: drop-shadow(2px 2px 2px rgba(234, 0, 255, 0.575));
+  filter: drop-shadow(1px 2px 5px rgba(225, 1, 245, 0.575));
   transition: all 0.5s ease;
-}
-header {
-  clear: both;
-  content: " ";
-  display: table;
 }
 /*......................................*/
 article {
   display: block;
-  margin-top: 100px;
 }
 .modau {
   display: block;
@@ -76,6 +74,7 @@ article {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
+  background-position: bottom;
 }
 #modau11 {
   display: block;
@@ -89,7 +88,7 @@ article {
 #modau11 p,
 h2 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: black;
+  color: rgb(136, 32, 32);
 }
 @keyframes modau11 {
   0% {
@@ -103,8 +102,9 @@ h2 {
   display: block;
   position: absolute;
   width: 100%;
+  max-width: 100%;
   z-index: 1;
-  top: 100px;
+  top: 90px;
   background-image: url("../anhhangxe/anhnenhangxe3.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -117,14 +117,15 @@ h2 {
   }
   100% {
     height: 0px;
-    width: 100%;
+    display: none;
   }
 }
 #modau2 h2 {
-  display: block;
-  position: relative;
+  display: inline-block;
+  position: absolute;
   top: 20%;
-  left: 30%;
+  margin-left: 50%;
+  transform: translateX(-50%);
   color: black;
   transition: all 1s;
   animation: modau22 3s ease 3s forwards;
@@ -135,9 +136,12 @@ h2 {
   }
   50% {
     color: rgb(148, 57, 136);
+    opacity: 0;
   }
   100% {
     color: transparent;
+    opacity: 0;
+    width: 0;
   }
 }
 /*.................................................*/
@@ -155,7 +159,7 @@ h2 {
   position: sticky;
   top: 20%;
 }
-.btn-group-vertical * {
+.btn-group-vertical *:not(a) {
   opacity: 0.7;
 }
 .btn {
@@ -192,22 +196,56 @@ h2 {
   padding-left: 30px;
   border-bottom: 4px double rgb(90, 9, 54);
 }
+.card-deck {
+  display: none;
+}
+#show_xe {
+  display: flex;
+  animation-name: show_moto;
+  animation-duration: 1.5s;
+}
+@keyframes show_moto {
+  from {
+    margin-top: 20%;
+    opacity: 0;
+    position: absolute;
+  }
+  to {
+    position: relative;
+    margin-top: 0%;
+    opacity: 1;
+  }
+}
 #ndchinh .card {
   background: transparent;
   border: none;
 }
 #ndchinh img {
   display: block;
+  position: relative;
+  object-fit: contain;
   width: 100%;
   height: 220px;
   transition: 2s;
 }
+#ndchinh img:hover ~ .card-title {
+  opacity: 0.2;
+}
 #ndchinh img:hover {
-  position: relative;
-  width: 90%;
-  height: 180px;
-  transition: 3s ease;
-  cursor: pointer;
+  filter: drop-shadow(1px 2px 5px rgb(114, 36, 36));
+  animation: card_img 2s 3;
+  transition: all 1s;
+}
+@keyframes card_img {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
 }
 #ndchinh .card-title {
   padding: 10px;
@@ -219,7 +257,7 @@ h2 {
   background-color: #69435a;
   padding: 10px;
   border-radius: 30px;
-  opacity: 0.3;
+  opacity: 0.7;
 }
 #ndchinh .card-link:hover {
   width: 80%;
@@ -232,7 +270,7 @@ section::after {
   content: " ";
 }
 /*.............................................*/
-body {
+body:not(#trangchu) {
   background-color: #1a171a;
 }
 #foot {
@@ -262,9 +300,6 @@ body {
 }
 /*..................................*/
 @media only screen and (max-width: 1000px) {
-  #trangchu {
-    position: relative;
-  }
   .navbar-brand {
     width: 20%;
   }
@@ -275,6 +310,7 @@ body {
     display: inline-block;
     font-size: small;
     padding: 30px;
+    line-height: 10px;
   }
   /*...........................*/
   #hang h4 {
@@ -314,6 +350,10 @@ body {
   }
 }
 @media only screen and (max-width: 600px) {
+  .navbar {
+    background-color: #3126299a;
+    border-radius: 0 0 30px 30px;
+  }
   #trangchu *:not(.gioithieu1) {
     display: block;
     float: left;
@@ -330,30 +370,52 @@ body {
     overflow: hidden;
   }
   .card {
-    display: block;
-    width: 40%;
-    float: left;
-    height: 50vw;
-    margin: 20px 20px;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
   }
   .card img {
     width: 50%;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   #trangchu .nav-item {
-    font-size: 8px;
-    padding: 10px 0;
-    margin-left: 20px;
+    font-size: 9px;
+    padding: 7% 0 0 0;
   }
-  article {
-    margin-top: 60px;
+  .nav-item:nth-child(1) {
+    margin-left: -2vw;
+  }
+  #trangchu .nav-item:not(.nav-item:nth-child(1)) {
+    margin-left: 4vw;
   }
   .modau {
     height: 300px;
   }
   #modau2 {
     top: 60px;
+  }
+  @keyframes modau2 {
+    0% {
+      height: 100px;
+    }
+    100% {
+      height: 0px;
+      display: none;
+    }
+  }
+  #ndphu {
+    background-image: url("../anhhangxe/anhnenhangxe2.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    background-position: right bottom;
+    background-attachment: fixed;
+    border-radius: 30%;
+    border: 2px double;
+  }
+  #ndphu * {
+    visibility: hidden;
   }
   /*..........................*/
   #batdaund p {
@@ -362,14 +424,18 @@ body {
   #modau11 h2 {
     font-size: large;
   }
+  #modau11 {
+    left: 25%;
+    width: 40%;
+  }
   #modau11 p {
     font-size: small;
   }
   /*....*/
   .card {
+    margin-left: 60%;
+    transform: translate(-50%);
     position: relative;
-    margin-left: 55%;
-    transform: translateX(-50%);
     width: 80%;
   }
   #ndchinh .card-title {

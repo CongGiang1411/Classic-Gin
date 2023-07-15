@@ -29,10 +29,11 @@
     ></script>
 
     <link rel="stylesheet" href="../css/hangxe.css" />
+    <script src="../js/index.js"></script>
 
     <title>Classic Gin-Hãng xe</title>
   </head>
-  <body>
+  <body onscroll="Show()">
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -48,39 +49,35 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <header>
-      <div class="container-fluid" id="trangchu">
-        <div class="navbar navbar-expand-sm">
-          <div class="navbar-brand">
-            <a href="../html/hangxe.html">
-              <img src="../anh_index/icon2-removebg-preview.png" alt="logo"
-            /></a>
-          </div>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <p><a href="../html/index.html">TRANG CHỦ</a></p>
-            </li>
-            <li class="nav-item" id="gioithieu">
-              <p><a href="../html/lichsu.html">GIỚI THIỆU</a></p>
-              <div class="gioithieu1" style="opacity: 0.7">
-                <p><a href="../html/lichsu.html">LỊCH SỬ</a></p>
-                <p><a href="../html/lichsu.html#ndchinh">KIỂU DÁNG</a></p>
-              </div>
-            </li>
-            <li class="nav-item">
-              <p><a href="../html/hangxe.html">HÃNG XE</a></p>
-              <div class="gioithieu1" style="opacity: 0.5">
-                <p><a href="#kawasaki">Kawasaki</a></p>
-                <p><a href="#yamaha">Yamaha</a></p>
-                <p><a href="#gpx">Gpx</a></p>
-                <p><a href="#sym">Sym</a></p>
-              </div>
-            </li>
-            <li class="nav-item">
-              <p><a href="../html/lienhe.html">LIÊN HỆ</a></p>
-            </li>
-          </ul>
-        </div>
+    <header class="container-fluid" id="trangchu">
+      <div class="navbar navbar-expand-sm">
+        <a href="../html/index.html" class="navbar-brand">
+          <img src="../anh_index/icon2-removebg-preview.png" alt="" />
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <p><a href="../html/index.html">TRANG CHỦ</a></p>
+          </li>
+          <li class="nav-item" id="gioithieu">
+            <p><a href="../html/lichsu.html">GIỚI THiỆU</a></p>
+            <div class="gioithieu1" style="opacity: 0.5">
+              <p><a href="../html/lichsu.html" onclick="C()">LỊCH SỬ</a></p>
+              <p><a href="../html/lichsu.html#ndchinh">KIỂU DÁNG</a></p>
+            </div>
+          </li>
+          <li class="nav-item" id="hangxe">
+            <p><a href="../html/hangxe.html">HÃNG XE</a></p>
+            <div class="gioithieu1" style="opacity: 0.5">
+              <p><a href="#nhakawasaki">Kawasaki</a></p>
+              <p><a href="#nhayamaha">Yamaha</a></p>
+              <p><a href="#nhagpx">Gpx</a></p>
+              <p><a href="#nhasym">Sym</a></p>
+            </div>
+          </li>
+          <li class="nav-item">
+            <p><a href="../html/lienhe.html">LIÊN HỆ</a></p>
+          </li>
+        </ul>
       </div>
     </header>
     <article>
@@ -128,7 +125,7 @@
         </div>
         <div class="col-sm-9" id="ndchinh">
           <div id="kawasaki"><h4>Kawasaki</h4></div>
-          <div class="card-deck">
+          <div class="card-deck" id="showkawasaki">
             <div class="card">
               <div class="card-body">
                 <img class="card-img-top" src="../anh_xe/W175.png" alt="w175" />
@@ -150,7 +147,7 @@
             <div class="card"></div>
           </div>
           <div id="gpx"><h4>Gpx</h4></div>
-          <div class="card-deck">
+          <div class="card-deck" id="showgpx">
             <div class="card">
               <div class="card-body">
                 <img
@@ -191,7 +188,7 @@
               </div>
             </div>
           </div>
-          <div class="card-deck">
+          <div class="card-deck" id="showgpx">
             <div class="card">
               <div class="card-body">
                 <img
@@ -213,7 +210,7 @@
             </div>
           </div>
           <div id="yamaha"><h4>Yamaha</h4></div>
-          <div class="card-deck">
+          <div class="card-deck" id="showyamaha">
             <div class="card">
               <div class="card-body">
                 <img
@@ -244,8 +241,8 @@
               <div class="carf-body"></div>
             </div>
           </div>
-          <div id="sym"><h1>Sym</h1></div>
-          <div class="card-deck">
+          <div id="sym"><h4>Sym</h4></div>
+          <div class="card-deck" id="showsym">
             <div class="card">
               <div class="card-body">
                 <img
@@ -287,7 +284,7 @@
     </section>
     <footer>
       <audio
-        src="../anh_index/Lawrence - TrackTribe.mp3"
+        src="../anh_index/Izzamuzzic - Shootout.mp3"
         autoplay
         style="display: none"
       ></audio>

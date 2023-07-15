@@ -85,7 +85,9 @@
           <p>Bạn có muốn có một chiếc xe mang tính cá nhân hóa không !?</p>
           <div class="btn-group" id="luachon">
             <button class="btn"><a href="#phanlienket">Có</a></button>
-            <button class="btn" id="luachonkhong"><a>Không</a></button>
+            <button class="btn" id="luachonkhong">
+              <a style="color: white">Không</a>
+            </button>
           </div>
         </div>
       </div>
@@ -136,10 +138,7 @@
             <button class="btn" id="nutvideo">
               Ấn xem video của tui <i class="fa-regular fa-heart"></i>
             </button>
-            <p style="font-size: small; opacity: 0.5" id="tbao">
-              nhớ bật tiếng nhé,ấn lại nút để tắt
-            </p>
-            <video autoplay controls id="video1">
+            <video controls id="video1">
               <source src="../anhhangxe/hi/MZOW6122.MP4" />
             </video>
           </div>
@@ -148,7 +147,6 @@
               $("#video1").toggle();
               $("#phananh").toggle();
               $("#nutthongtin").css("display", "block");
-              $("#tbao").hide();
             });
           </script>
           <div class="container" id="phananh">
@@ -179,7 +177,7 @@
             </div>
           </div>
           <div class="container" id="nhapthongtin">
-            <div class="form-group">
+            <div class="form-group" style="padding-top: 10px">
               <input
                 type="text"
                 class="form-control"
@@ -251,7 +249,7 @@
                 id="dieukhoan"
                 class="form-check-inline"
                 required
-              /><label for="dieukhoan"
+              /><label for="dieukhoan" style="color: antiquewhite"
                 >Tôi đồng ý cho phép sử dựng dữ liệu đã nhập</label
               >
             </div>

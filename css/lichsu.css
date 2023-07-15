@@ -1,11 +1,12 @@
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
   background-color: #1c1c1c;
   color: white;
   z-index: 0;
   text-decoration: none;
 }
 html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 p,
@@ -15,12 +16,13 @@ a:hover {
   text-decoration: none;
   color: white;
 }
+/* ............................ */
 #trangchu {
   display: block;
   position: fixed;
   z-index: 1;
   width: 100%;
-  background-color: rgb(39, 31, 31);
+  background-color: rgb(27, 22, 22);
 }
 
 .navbar-brand {
@@ -28,23 +30,27 @@ a:hover {
 }
 .navbar-brand img {
   display: block;
+  object-fit: cover;
   width: 15%;
   margin: 0px auto;
 }
 
 .navbar-nav .nav-item {
   display: block;
-  padding: 20px 40px 0 30px;
+  padding: 20px 40px 0 40px;
   margin-top: 10px;
   font-size: larger;
 }
 .navbar-nav .nav-item:hover {
-  font-size: 22px;
-  text-shadow: 1px 1px 2px wheat, 0 0 25px red, 0 0 5px rgb(39, 1, 1);
-  transition: 1s;
+  text-shadow: 1px 1px 10px wheat, 0 0 35px red, 0 0 10px rgb(39, 1, 1);
+  transition: all 0.5s;
+}
+.nav-item:hover p {
+  border-bottom: 1px solid salmon;
+  transition: all 0.5s ease;
 }
 #trangchu * {
-  background-color: rgb(39, 31, 31);
+  background-color: rgb(27, 22, 22);
 }
 .gioithieu1 {
   display: none;
@@ -156,6 +162,7 @@ a:hover {
 }
 .carousel-inner img {
   display: block;
+  object-fit: cover;
   width: 100%;
   height: 500px;
 }
@@ -174,6 +181,7 @@ a:hover {
 }
 .modal-body img {
   display: block;
+  object-fit: cover;
   width: 100%;
 }
 figcaption {
@@ -189,7 +197,7 @@ figcaption {
   position: relative;
   transition: 0.5s;
   font-size: larger;
-  background-image: linear-gradient(to bottom, black, rgba(255, 0, 0, 0.164));
+  background-image: linear-gradient(to bottom, black, rgba(155, 8, 8, 0.39));
 }
 
 .btn::before {
@@ -330,6 +338,7 @@ body {
 }
 .myCard img {
   display: block;
+  object-fit: cover;
   width: 100%;
   padding: 0;
   border-radius: 20px;
@@ -409,9 +418,7 @@ body {
     display: none;
   }
   /*.................*/
-  header {
-    position: static;
-  }
+
   #trangchu .nav-item {
     font-size: small;
     padding: 0px 30px;
@@ -473,24 +480,41 @@ body {
     font-size: small;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   #trangchu .nav-item {
     display: inline-block;
-    font-size: 8px;
-    padding: 0;
-    margin-left: 10px;
+    font-size: 9px;
+    padding: 1rem 0 0 0;
+    margin: 0;
+  }
+  .nav-item:nth-child(1) {
+    margin-left: -2vw;
+  }
+  #trangchu .nav-item:not(.nav-item:nth-child(1)) {
+    margin-left: 3vw;
+  }
+  #capptioncf {
+    font-size: xx-large;
   }
   /*..........................*/
   #anhnenlichsu {
-    background-size: 100% 50%;
-    width: 100%;
-    height: 200px;
+    background-size: 110% 60%;
+    height: 15rem;
+    background-position: right top;
   }
   #divanhnenlichsu {
     display: block;
     position: absolute;
     font-size: 10px;
-    margin-top: -30%;
+    margin-top: -25%;
+  }
+  @keyframes modaulichsu {
+    form {
+      margin-left: -30%;
+    }
+    to {
+      margin-left: 5%;
+    }
   }
   #thongbao {
     height: 50px;

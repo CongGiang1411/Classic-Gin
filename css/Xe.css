@@ -16,6 +16,7 @@ html {
 #trangchu {
   display: block;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 2;
   background-color: rgba(61, 48, 63, 0.877);
@@ -51,11 +52,17 @@ header {
   display: block;
   position: absolute;
 }
+.gioithieu1 a:hover {
+  text-shadow: #666699;
+  font-weight: 700;
+}
 .navbar-nav .nav-item:hover {
-  font-size: 22px;
   text-shadow: 5px 5px 5px rgb(0, 0, 0), 0 0 35px rgb(157, 32, 161),
     0 0 10px rgb(86, 7, 117);
   transition: all 0.5s;
+}
+.nav-item:hover a:not(.gioithieu1 a) {
+  border-bottom: 2px solid rgb(126, 26, 226);
 }
 .navbar-brand img:hover {
   filter: drop-shadow(5px 10px 5px rgba(0, 0, 0, 0.575));
@@ -98,7 +105,6 @@ section {
   background: transparent;
 }
 #tenxe .btn:hover {
-  font-size: large;
   transition: 1s;
 }
 #tenxe .btn::before {
@@ -124,6 +130,7 @@ section {
   display: block;
   margin: 50px auto;
   width: 90%;
+  object-fit: cover;
   height: 28vw;
 }
 .carousel-indicators li {
@@ -198,12 +205,13 @@ section {
 }
 #phandoxe h3 {
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 40px;
+  margin-left: 0 auto;
   padding: 20px;
 }
 #phandoxe1 {
   display: block;
   height: 30vw;
+  position: relative;
 }
 .anhdoxe {
   display: flex;
@@ -217,13 +225,16 @@ section {
 }
 .anhdo img {
   display: block;
+  object-fit: cover;
+  position: absolute;
   width: 100%;
-  height: 200px;
+  height: 180px;
 }
 .anhdo:hover {
   flex: 4;
   cursor: pointer;
   transition: 1.5s ease;
+  transition-delay: 0.2s;
 }
 .anhdo:hover img {
   height: auto;
@@ -256,7 +267,6 @@ section {
 }
 .card-title {
   display: block;
-  overflow: auto;
   height: 20px;
   font-size: large;
   font-weight: bold;
@@ -336,6 +346,7 @@ body {
   /*.................*/
   #anhxezin img {
     height: 40vw;
+    object-fit: cover;
   }
   .carousel-indicators li {
     width: 10%;
@@ -345,10 +356,6 @@ body {
     height: auto;
   }
   /*.................*/
-
-  #phandoxe1 {
-    height: auto;
-  }
   .anhdo img {
     width: 100%;
     height: 10vw;
@@ -390,11 +397,16 @@ body {
 }
 @media only screen and (max-width: 450px) {
   #trangchu .nav-item {
-    font-size: 8px;
-    padding: 10px 0;
+    display: inline-block;
+    font-size: 9px;
+    padding: 1rem 0 0 0;
+    margin: 0;
+  }
+  .nav-item:nth-child(1) {
+    margin-left: -2vw;
   }
   #trangchu .nav-item:not(.nav-item:nth-child(1)) {
-    margin-left: 20px;
+    margin-left: 3vw;
   }
   #tenxe .btn {
     font-size: smaller;
@@ -413,6 +425,8 @@ body {
 
   .card-title {
     font-size: 12px;
+    padding: 0;
+    margin: 0;
   }
   .card-link {
     font-size: 8px;
@@ -421,5 +435,10 @@ body {
   /*......*/
   .ket:nth-child(2) {
     display: none;
+    visibility: hidden;
+  }
+  .ket i:hover {
+    font-size: 20px;
+    transition: 0.5s;
   }
 }
